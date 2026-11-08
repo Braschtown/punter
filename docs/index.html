@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#101412">
+  <meta name="description" content="Punter Lab: paper trading research into whether a betting edge exists in Australian racing.">
+  <title>Punter Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%2300522F'/%3E%3Cpath d='M6 16l4-4 3 3 5-6' fill='none' stroke='%239EF7C3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <header class="appbar">
+    <div class="appbar-inner">
+      <h1 class="t-title" id="page-title">Today</h1>
+      <span class="badge outlined" title="No real bets are placed">Paper only</span>
+    </div>
+  </header>
+
+  <main id="main" class="page" tabindex="-1" aria-live="polite"></main>
+
+  <button class="fab" id="fab" type="button" hidden></button>
+
+  <nav class="nav" aria-label="Main">
+    <div class="nav-inner" id="nav"></div>
+  </nav>
+
+  <dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+</body>
+</html>
