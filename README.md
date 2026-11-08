@@ -24,7 +24,7 @@ It covers thoroughbreds at all Australian meetings, plus greyhounds at The Q (Q1
 1. **Keep the repo public.** That gives free Pages and free Actions minutes.
 2. **Enable Actions:** Settings > Actions > General, allow actions. The workflows ask for `contents: write` themselves, so they can push to `data`. If a push is still refused, set "Workflow permissions" to "Read and write permissions" on the same page.
 3. **Identify yourself to Ladbrokes:** Settings > Secrets and variables > Actions, add `LADBROKES_FROM` with a contact email address. Add it as a secret, so it is masked in the public Actions logs (a variable also works). Only Ladbrokes receives it, in the `From` request header.
-4. **Enable Pages:** Settings > Pages > Deploy from a branch > `main` / `/docs`. (The app arrives in Phase 3.)
+4. **Enable Pages:** Settings > Pages > Deploy from a branch > `main` / `/docs`. The app is then at https://braschtown.github.io/punter/. It reads data straight from the `data` branch, so it updates without a Pages rebuild. Expect up to 5 minutes of caching.
 5. **No other secrets are needed in v1.** Betfair is blocked from GitHub runners, so there is no Betfair login to store.
 
 ### Running locally
@@ -48,6 +48,28 @@ node --test test/*.test.mjs
 ```
 
 The first command checks out the `data` branch into `./data`, which the jobs read and write. Commit inside `./data` to save changes.
+
+To preview the app locally against `./data`, serve the repo root and open http://localhost:8411/docs/:
+
+```bash
+python3 -m http.server 8411
+```
+
+## Saving picks and notes from the app
+
+The app cannot write to GitHub, and it never holds a token. Picks logged with "Log pick" and replay notes are kept in that browser's local storage and marked "This browser only". Clearing site data deletes them. To keep them:
+
+1. Ledger > Export JSON downloads `punterlab-picks-YYYY-MM-DD.json` (Notes has its own export for replays).
+2. In `./data` (the `data` branch), copy each entry from its `bets` array into the `bets` array of `ledger.json`. Replays go into `replays` in `notes.json`.
+3. Commit and push:
+
+```bash
+git -C data commit -am "Add paper picks" && git -C data push
+```
+
+From then on the results job settles those bets. Until they are committed, the app settles browser picks itself from the committed results.
+
+The app blocks any pick that would take the week (Monday to Sunday, Brisbane) over the weekly cap in `ledger.json` (`weeklyCap`, $100).
 
 ## How to read the results
 
