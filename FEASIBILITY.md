@@ -120,9 +120,10 @@ The scripts use Node 20 with no npm dependencies: built-in `fetch` and `node:tes
 - **R2 has already run.** Primer Pearl won, Unapologetically ran 4th and Vienna Belle missed the placings. Vienna Belle's final Ladbrokes fixed price was $4.00 (logged at $3.60), and Unapologetically's was $2.45.
 - **R8 and R12 are still open.** Dream Dash is in box 8 at $9.50 and Sand Land is at $2.45.
 
-## Decisions needed before Phase 1
+## Decisions (8 Nov 2026)
 
-1. Make the repo **public** (recommended), or keep it private and pay for GitHub Pro.
-2. What contact value should go in the Ladbrokes `From` header? It is stored as a repo variable, not in code.
-3. Should **Q Straight** be added to the greyhound scope alongside Q1 Lakeside and Q2 Parklands?
-4. Betfair BSP: skip it for v1 (recommended), or add the optional local or self-hosted cross-check?
+1. **Repo is public:** free Pages and Actions.
+2. **Ladbrokes `From` header:** read from the `LADBROKES_FROM` repo variable. Until it is set, the fallback names the project.
+3. **Q Straight is in scope** alongside Q1 Lakeside and Q2 Parklands, because the seeded picks are there.
+4. **Betfair is skipped for v1.**
+5. **Data lives on a separate `data` branch,** so data commits do not trigger Pages builds on `main`.
