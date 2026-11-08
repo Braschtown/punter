@@ -20,18 +20,21 @@
     },
     "results": {
       "lastRun": {
-        "utc": "2026-11-08T08:17:33Z",
-        "bne": "2026-11-08T18:17:33+10:00"
+        "utc": "2026-11-08T17:54:48Z",
+        "bne": "2026-11-09T03:54:48+10:00"
       },
       "finished": {
-        "utc": "2026-11-08T08:17:35Z",
-        "bne": "2026-11-08T18:17:35+10:00"
+        "utc": "2026-11-08T17:55:01Z",
+        "bne": "2026-11-09T03:55:01+10:00"
       },
       "ok": true,
       "errors": 0,
-      "gaps": 0,
+      "gaps": 9,
       "counts": {
-        "pending": 1
+        "settled": 11,
+        "firstSeenAfterJump": 1,
+        "abandoned": 3,
+        "betsSettled": 2
       }
     },
     "analysis": {
@@ -59,12 +62,12 @@
       "state": "OK",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-08T17:53:45Z",
-        "bne": "2026-11-09T03:53:45+10:00"
+        "utc": "2026-11-08T17:54:48Z",
+        "bne": "2026-11-09T03:54:48+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-08T17:53:45Z",
-        "bne": "2026-11-09T03:53:45+10:00"
+        "utc": "2026-11-08T17:54:48Z",
+        "bne": "2026-11-09T03:54:48+10:00"
       }
     },
     "racing-results": {
@@ -73,12 +76,12 @@
       "note": "Results come from the Ladbrokes event feed. Official body pages are linked, not read.",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-08T08:17:33Z",
-        "bne": "2026-11-08T18:17:33+10:00"
+        "utc": "2026-11-08T17:54:48Z",
+        "bne": "2026-11-09T03:54:48+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-08T08:17:33Z",
-        "bne": "2026-11-08T18:17:33+10:00"
+        "utc": "2026-11-08T17:54:48Z",
+        "bne": "2026-11-09T03:54:48+10:00"
       }
     },
     "betfair": {
@@ -88,6 +91,101 @@
     }
   },
   "log": [
+    {
+      "utc": "2026-11-08T17:55:01Z",
+      "bne": "2026-11-09T03:55:01+10:00",
+      "job": "results",
+      "level": "info",
+      "message": "Settled paper bet Sand Land: Lost"
+    },
+    {
+      "utc": "2026-11-08T17:55:01Z",
+      "bne": "2026-11-09T03:55:01+10:00",
+      "job": "results",
+      "level": "info",
+      "message": "Settled paper bet Dream Dash: Lost"
+    },
+    {
+      "utc": "2026-11-08T17:55:01Z",
+      "bne": "2026-11-09T03:55:01+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R12 2026-11-08: no late price for 8 runner(s)",
+      "raceId": "e88a939a-02b4-47f3-a930-36912b5ca869",
+      "key": "nolate:e88a939a-02b4-47f3-a930-36912b5ca869"
+    },
+    {
+      "utc": "2026-11-08T17:55:01Z",
+      "bne": "2026-11-09T03:55:01+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R11 2026-11-08: no late price for 8 runner(s)",
+      "raceId": "06112279-f9fd-41f4-b491-9a11765acda6",
+      "key": "nolate:06112279-f9fd-41f4-b491-9a11765acda6"
+    },
+    {
+      "utc": "2026-11-08T17:54:59Z",
+      "bne": "2026-11-09T03:54:59+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R10 2026-11-08: no late price for 8 runner(s)",
+      "raceId": "0e8f78ab-b4d8-486a-a76b-43da731c1d01",
+      "key": "nolate:0e8f78ab-b4d8-486a-a76b-43da731c1d01"
+    },
+    {
+      "utc": "2026-11-08T17:54:59Z",
+      "bne": "2026-11-09T03:54:59+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "York R8 2026-11-08: no price snapshots at all",
+      "raceId": "8901435f-03b8-4cd3-890f-78f975275bf6",
+      "key": "nosnap:8901435f-03b8-4cd3-890f-78f975275bf6"
+    },
+    {
+      "utc": "2026-11-08T17:54:58Z",
+      "bne": "2026-11-09T03:54:58+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R9 2026-11-08: no late price for 7 runner(s)",
+      "raceId": "2dc8ad79-57b9-4162-aac7-9bc43518aa63",
+      "key": "nolate:2dc8ad79-57b9-4162-aac7-9bc43518aa63"
+    },
+    {
+      "utc": "2026-11-08T17:54:57Z",
+      "bne": "2026-11-09T03:54:57+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R8 2026-11-08: no late price for 8 runner(s)",
+      "raceId": "dced2c5c-2616-45c4-b0a6-f0d1421b6915",
+      "key": "nolate:dced2c5c-2616-45c4-b0a6-f0d1421b6915"
+    },
+    {
+      "utc": "2026-11-08T17:54:56Z",
+      "bne": "2026-11-09T03:54:56+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R7 2026-11-08: no late price for 8 runner(s)",
+      "raceId": "3e22138f-e484-4dbe-b8a4-fb934a518205",
+      "key": "nolate:3e22138f-e484-4dbe-b8a4-fb934a518205"
+    },
+    {
+      "utc": "2026-11-08T17:54:54Z",
+      "bne": "2026-11-09T03:54:54+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "York R6 2026-11-08: no price snapshots at all",
+      "raceId": "df44eb2a-e2cf-4071-a409-5bc29315ecd2",
+      "key": "nosnap:df44eb2a-e2cf-4071-a409-5bc29315ecd2"
+    },
+    {
+      "utc": "2026-11-08T17:54:52Z",
+      "bne": "2026-11-09T03:54:52+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "York R5 2026-11-08: no price snapshots at all",
+      "raceId": "83778c9a-6ae1-447d-92d8-77aadab3f012",
+      "key": "nosnap:83778c9a-6ae1-447d-92d8-77aadab3f012"
+    },
     {
       "utc": "2026-11-08T08:16:10Z",
       "bne": "2026-11-08T18:16:10+10:00",
