@@ -2,7 +2,7 @@
 
 Where Punter Lab actually is against [METHOD.md](METHOD.md). Every status below comes from what is in the repo. [`progress.json`](https://github.com/Braschtown/punter/blob/data/progress.json) on the `data` branch mirrors this file for the app. Change both together.
 
-Last checked: 8 Nov 2026, 11:40 UTC (9:40 pm Brisbane).
+Last checked: 8 Nov 2026, 17:58 UTC (3:58 am Brisbane, 9 Nov).
 
 ## Goal
 
@@ -34,8 +34,8 @@ What can be read reliably from a GitHub Actions runner.
 Price snapshots, results, timestamps in UTC and Australia/Brisbane.
 
 - **Built:** [`scripts/snapshot.mjs`](../scripts/snapshot.mjs) and [`scripts/results.mjs`](../scripts/results.mjs), run by `snapshot.yml` and `results.yml`. Every capture stores `utc` and `bne`.
-- **Evidence:** manual runs on 8 Nov 2026 committed 31 settled thoroughbred races and 3 settled greyhound races to the `data` branch.
-- **Not yet true:** no scheduled run has fired since the workflows were added at 08:16 UTC on 8 Nov 2026, so far only manual runs. No runner yet has an early price (30 minutes or more before the jump) or a late price.
+- **Evidence:** manual runs on 8 Nov 2026 committed the first settled races to the `data` branch. Scheduled runs started firing at 17:53 UTC on 8 Nov 2026, after the workflows were recommitted from a linked GitHub identity and re-enabled.
+- **Not yet true:** scheduled capture has not yet covered a full racing day. No runner yet has an early price (30 minutes or more before the jump) or a late price.
 - **Gate:** scheduled snapshot and results runs firing on every racing day, with early and late prices captured for most runners.
 
 ### 3. Market diagnostics: in progress
@@ -43,7 +43,7 @@ Price snapshots, results, timestamps in UTC and Australia/Brisbane.
 Overround, favourite-longshot bias and price lag per track.
 
 - **Built:** [`scripts/analysis.mjs`](../scripts/analysis.mjs) computes all three tests per code, with baselines and a 70/30 date split. Overround is also broken down per track.
-- **Not yet true:** every test shows "Insufficient data" (31 of 300 thoroughbred races, 3 of 300 greyhound). Favourite-longshot bias and price lag are reported per code, not yet per track.
+- **Not yet true:** every test shows "Insufficient data" (33 of 300 thoroughbred races, 12 of 300 greyhound). Favourite-longshot bias and price lag are reported per code, not yet per track.
 - **Gate:** 300 settled races per code, a verdict on each test, and per-track results for all three tests.
 
 ### 4. Market baseline: not started
@@ -98,7 +98,6 @@ Fractional Kelly with the four rules in Part 6 of METHOD.md.
 
 - **No Betfair SP capture,** so there is no benchmark to measure any model against. Betfair blocks GitHub-hosted runners.
 - **Racing Queensland form pages.** Racing Queensland appears to render fields and start times via JavaScript, which an Actions runner may not be able to read. Fields and start times currently come from Ladbrokes, so this mainly blocks form data for the feature store.
-- **Scheduled collection runs have not fired yet,** so no early or late prices have been captured and the price lag test has no data.
 
 ## Rules
 
