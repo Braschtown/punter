@@ -23,9 +23,9 @@ It covers thoroughbreds at all Australian meetings, plus greyhounds at The Q (Q1
 
 1. **Keep the repo public.** That gives free Pages and free Actions minutes.
 2. **Enable Actions:** Settings > Actions > General, allow actions. The workflows ask for `contents: write` themselves, so they can push to `data`. If a push is still refused, set "Workflow permissions" to "Read and write permissions" on the same page.
-3. **Identify yourself to Ladbrokes:** Settings > Secrets and variables > Actions > Variables, add `LADBROKES_FROM` with a contact address. It is a variable, not a secret, because it is sent in a request header anyway.
+3. **Identify yourself to Ladbrokes:** Settings > Secrets and variables > Actions, add `LADBROKES_FROM` with a contact email address. Add it as a secret, so it is masked in the public Actions logs (a variable also works). Only Ladbrokes receives it, in the `From` request header.
 4. **Enable Pages:** Settings > Pages > Deploy from a branch > `main` / `/docs`. (The app arrives in Phase 3.)
-5. **No secrets are needed in v1.** Betfair is blocked from GitHub runners, so nothing goes in GitHub Secrets.
+5. **No other secrets are needed in v1.** Betfair is blocked from GitHub runners, so there is no Betfair login to store.
 
 ### Running locally
 

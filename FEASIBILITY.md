@@ -123,7 +123,7 @@ The scripts use Node 20 with no npm dependencies: built-in `fetch` and `node:tes
 ## Decisions (8 Nov 2026)
 
 1. **Repo is public:** free Pages and Actions.
-2. **Ladbrokes `From` header:** read from the `LADBROKES_FROM` repo variable. Until it is set, the fallback names the project.
+2. **Ladbrokes `From` header:** read from the `LADBROKES_FROM` repo secret (or variable). Until it is set, the fallback names the project.
 3. **Q Straight is in scope** alongside Q1 Lakeside and Q2 Parklands, because the seeded picks are there.
 4. **Betfair is skipped for v1.**
 5. **Data lives on a separate `data` branch,** so data commits do not trigger Pages builds on `main`.

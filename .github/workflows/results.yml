@@ -30,6 +30,6 @@ jobs:
           node-version: 20
       - run: node scripts/results.mjs
         env:
-          LADBROKES_FROM: ${{ vars.LADBROKES_FROM }}
+          LADBROKES_FROM: ${{ secrets.LADBROKES_FROM || vars.LADBROKES_FROM }}
       - run: bash scripts/commit-data.sh data "results $(date -u +%Y-%m-%dT%H:%MZ)"
         if: always()
