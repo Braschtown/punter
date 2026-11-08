@@ -7,6 +7,7 @@ import * as ledger from './screens/ledger.js';
 import * as tests from './screens/tests.js';
 import * as notes from './screens/notes.js';
 import * as status from './screens/status.js';
+import * as method from './screens/method.js';
 
 const ROUTES = {
   today: { title: 'Today', label: 'Today', icon: 'today', screen: today },
@@ -14,6 +15,7 @@ const ROUTES = {
   tests: { title: 'Tests', label: 'Tests', icon: 'tests', screen: tests },
   notes: { title: 'Notes', label: 'Notes', icon: 'notes', screen: notes },
   status: { title: 'Status', label: 'Status', icon: 'status', screen: status },
+  method: { title: 'Method', label: 'Method', icon: 'method', screen: method },
 };
 
 const main = document.getElementById('main');
