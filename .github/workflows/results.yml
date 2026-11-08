@@ -1,0 +1,35 @@
+name: Record results
+
+# Every 15 minutes from 10:00 to 01:59 Brisbane (00:00-15:59 UTC), plus a morning sweep
+# at 06:40 Brisbane for anything that settled late.
+on:
+  schedule:
+    - cron: '*/15 0-15 * * *'
+    - cron: '40 20 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-branch
+  cancel-in-progress: false
+
+jobs:
+  results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/results.mjs
+        env:
+          LADBROKES_FROM: ${{ vars.LADBROKES_FROM }}
+      - run: bash scripts/commit-data.sh data "results $(date -u +%Y-%m-%dT%H:%MZ)"
+        if: always()
