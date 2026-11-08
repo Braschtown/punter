@@ -1,0 +1,80 @@
+{
+  "updated": "2026-11-08T11:40:00Z",
+  "phases": [
+    {
+      "id": 1,
+      "name": "Feasibility",
+      "status": "done",
+      "note": "FEASIBILITY.md: Ladbrokes works from a GitHub runner, Betfair does not.",
+      "gate": "Know which sources can be read reliably from a GitHub Actions runner."
+    },
+    {
+      "id": 2,
+      "name": "Collection",
+      "status": "in progress",
+      "note": "Snapshot and results jobs work on manual runs. No scheduled run has fired yet.",
+      "gate": "Scheduled snapshot and results runs firing on every racing day, with early and late prices captured for most runners."
+    },
+    {
+      "id": 3,
+      "name": "Market diagnostics",
+      "status": "in progress",
+      "note": "All three tests built. Insufficient data: 31 of 300 thoroughbred races, 3 of 300 greyhound.",
+      "gate": "300 settled races per code, a verdict on each test, and per-track results for all three tests."
+    },
+    {
+      "id": 4,
+      "name": "Market baseline",
+      "status": "not started",
+      "note": "Only raw 1 / O and overround exist. No power or Shin devigging.",
+      "gate": "Power and Shin devigging implemented and tested, with a reliability check of p_mkt against results."
+    },
+    {
+      "id": 5,
+      "name": "Benchmark",
+      "status": "blocked",
+      "note": "Betfair SP files and logins are refused from GitHub-hosted runners.",
+      "gate": "Betfair SP captured for every race in scope, joined to our races by track, date and runner."
+    },
+    {
+      "id": 6,
+      "name": "Feature store",
+      "status": "not started",
+      "note": "Only barrier or box, distance, track condition and prices are captured. No form source yet.",
+      "gate": "A documented, permitted form source, and per-runner features stored for every settled race."
+    },
+    {
+      "id": 7,
+      "name": "Fundamental model",
+      "status": "not started",
+      "note": "Needs the feature store.",
+      "gate": "p_fund fitted on form features only, normalised within race, with no market data."
+    },
+    {
+      "id": 8,
+      "name": "Combination and calibration",
+      "status": "not started",
+      "note": "Needs p_fund, p_mkt and the Betfair SP benchmark.",
+      "gate": "Out-of-sample log loss better than de-vigged Betfair SP on a locked holdout, with reliability recorded."
+    },
+    {
+      "id": 9,
+      "name": "Staking",
+      "status": "not started",
+      "note": "Ledger uses flat $1 paper stakes inside the $100 weekly cap. No Kelly sizing.",
+      "gate": "Quarter Kelly off a $2,000 notional bank, joint sizing within a race, 2% per-bet cap and the weekly cap, all tested."
+    },
+    {
+      "id": 10,
+      "name": "Paper trading",
+      "status": "not started",
+      "note": "Paper ledger works, but the 3 picks so far were manual, not model picks.",
+      "gate": "6 to 8 weeks of model-sized paper bets, then a recorded go / no-go decision against the backtest."
+    }
+  ],
+  "blockers": [
+    "No Betfair SP capture, so there is no benchmark to measure any model against.",
+    "Racing Queensland appears to render fields and start times via JavaScript, which an Actions runner may not be able to read.",
+    "Scheduled collection runs have not fired yet, so no early or late prices have been captured."
+  ]
+}
