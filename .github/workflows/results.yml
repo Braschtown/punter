@@ -2,6 +2,8 @@ name: Record results
 
 # Every 15 minutes from 10:00 to 01:59 Brisbane (00:00-15:59 UTC), plus a morning sweep
 # at 06:40 Brisbane for anything that settled late.
+# GitHub runs schedules as the last person to commit this file, so commit it from a git
+# identity linked to a GitHub account, or the schedule silently never fires.
 on:
   schedule:
     - cron: '*/15 0-15 * * *'

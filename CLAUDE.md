@@ -7,3 +7,4 @@
 - **Keep it simple:** no framework, no build step, no databases, no auth, no paid services.
 - **Australian English** in all UI text, comments and docs. No em dashes anywhere.
 - **Small, reviewable commits.** Run `node --test test/*.test.mjs` before committing.
+- **Commit as a linked GitHub identity.** This repo's git email is the `users.noreply.github.com` address. Scheduled workflows never fire if the last commit to the workflow file came from an unlinked email.
