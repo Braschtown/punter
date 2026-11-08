@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T11:40:00Z",
+  "updated": "2026-11-08T17:58:00Z",
   "phases": [
     {
       "id": 1,
@@ -12,14 +12,14 @@
       "id": 2,
       "name": "Collection",
       "status": "in progress",
-      "note": "Snapshot and results jobs work on manual runs. No scheduled run has fired yet.",
+      "note": "Scheduled runs started firing at 17:53 UTC on 8 Nov 2026. Not yet proven across a full racing day.",
       "gate": "Scheduled snapshot and results runs firing on every racing day, with early and late prices captured for most runners."
     },
     {
       "id": 3,
       "name": "Market diagnostics",
       "status": "in progress",
-      "note": "All three tests built. Insufficient data: 31 of 300 thoroughbred races, 3 of 300 greyhound.",
+      "note": "All three tests built. Insufficient data: 33 of 300 thoroughbred races, 12 of 300 greyhound.",
       "gate": "300 settled races per code, a verdict on each test, and per-track results for all three tests."
     },
     {
@@ -74,7 +74,6 @@
   ],
   "blockers": [
     "No Betfair SP capture, so there is no benchmark to measure any model against.",
-    "Racing Queensland appears to render fields and start times via JavaScript, which an Actions runner may not be able to read.",
-    "Scheduled collection runs have not fired yet, so no early or late prices have been captured."
+    "Racing Queensland appears to render fields and start times via JavaScript, which an Actions runner may not be able to read."
   ]
 }
