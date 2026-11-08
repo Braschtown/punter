@@ -1,0 +1,34 @@
+name: Recompute analysis
+
+# After every results run, plus a nightly pass at 07:00 Brisbane (21:00 UTC).
+on:
+  workflow_run:
+    workflows: ['Record results']
+    types: [completed]
+  schedule:
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-branch
+  cancel-in-progress: false
+
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/analysis.mjs
+      - run: bash scripts/commit-data.sh data "analysis $(date -u +%Y-%m-%dT%H:%MZ)"
+        if: always()
