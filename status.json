@@ -19,20 +19,19 @@
     },
     "results": {
       "lastRun": {
-        "utc": "2026-11-09T03:15:02Z",
-        "bne": "2026-11-09T13:15:02+10:00"
+        "utc": "2026-11-09T11:31:48Z",
+        "bne": "2026-11-09T21:31:48+10:00"
       },
       "finished": {
-        "utc": "2026-11-09T03:15:10Z",
-        "bne": "2026-11-09T13:15:10+10:00"
+        "utc": "2026-11-09T11:32:18Z",
+        "bne": "2026-11-09T21:32:18+10:00"
       },
       "ok": true,
       "errors": 0,
-      "gaps": 6,
+      "gaps": 30,
       "counts": {
-        "settled": 6,
-        "abandoned": 1,
-        "pending": 1
+        "settled": 24,
+        "abandoned": 6
       }
     },
     "analysis": {
@@ -60,12 +59,12 @@
       "state": "OK",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-09T05:05:33Z",
-        "bne": "2026-11-09T15:05:33+10:00"
+        "utc": "2026-11-09T11:31:48Z",
+        "bne": "2026-11-09T21:31:48+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-09T05:05:33Z",
-        "bne": "2026-11-09T15:05:33+10:00"
+        "utc": "2026-11-09T11:31:48Z",
+        "bne": "2026-11-09T21:31:48+10:00"
       }
     },
     "racing-results": {
@@ -74,12 +73,12 @@
       "note": "Results come from the Ladbrokes event feed. Official body pages are linked, not read.",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-09T03:15:02Z",
-        "bne": "2026-11-09T13:15:02+10:00"
+        "utc": "2026-11-09T11:31:48Z",
+        "bne": "2026-11-09T21:31:48+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-09T03:15:02Z",
-        "bne": "2026-11-09T13:15:02+10:00"
+        "utc": "2026-11-09T11:31:48Z",
+        "bne": "2026-11-09T21:31:48+10:00"
       }
     },
     "betfair": {
@@ -89,6 +88,276 @@
     }
   },
   "log": [
+    {
+      "utc": "2026-11-09T11:32:18Z",
+      "bne": "2026-11-09T21:32:18+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R8 2026-11-09: no late price for 7 runner(s)",
+      "raceId": "e721750c-8d70-41ad-973f-d2e6cdeac63d",
+      "key": "nolate:e721750c-8d70-41ad-973f-d2e6cdeac63d"
+    },
+    {
+      "utc": "2026-11-09T11:32:17Z",
+      "bne": "2026-11-09T21:32:17+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R7 2026-11-09: no late price for 8 runner(s)",
+      "raceId": "5e194ee3-96c5-4802-91e2-cb40d7ac3b9b",
+      "key": "nolate:5e194ee3-96c5-4802-91e2-cb40d7ac3b9b"
+    },
+    {
+      "utc": "2026-11-09T11:32:16Z",
+      "bne": "2026-11-09T21:32:16+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R6 2026-11-09: no late price for 8 runner(s)",
+      "raceId": "8b6c5494-ab0a-43ad-af8f-7da8c4b6af96",
+      "key": "nolate:8b6c5494-ab0a-43ad-af8f-7da8c4b6af96"
+    },
+    {
+      "utc": "2026-11-09T11:32:15Z",
+      "bne": "2026-11-09T21:32:15+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R5 2026-11-09: no late price for 8 runner(s)",
+      "raceId": "57fb4ef2-e324-459f-b781-9974e9ce8598",
+      "key": "nolate:57fb4ef2-e324-459f-b781-9974e9ce8598"
+    },
+    {
+      "utc": "2026-11-09T11:32:14Z",
+      "bne": "2026-11-09T21:32:14+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R4 2026-11-09: no late price for 6 runner(s)",
+      "raceId": "632bae12-31d4-41b4-8019-646455bf64e9",
+      "key": "nolate:632bae12-31d4-41b4-8019-646455bf64e9"
+    },
+    {
+      "utc": "2026-11-09T11:32:13Z",
+      "bne": "2026-11-09T21:32:13+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R3 2026-11-09: no late price for 7 runner(s)",
+      "raceId": "b3c85746-f8c2-4a35-a436-b3a6eeec31d9",
+      "key": "nolate:b3c85746-f8c2-4a35-a436-b3a6eeec31d9"
+    },
+    {
+      "utc": "2026-11-09T11:32:12Z",
+      "bne": "2026-11-09T21:32:12+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R2 2026-11-09: no late price for 8 runner(s)",
+      "raceId": "8e8a5233-23e8-43b8-a0ad-d2e117901d7b",
+      "key": "nolate:8e8a5233-23e8-43b8-a0ad-d2e117901d7b"
+    },
+    {
+      "utc": "2026-11-09T11:32:11Z",
+      "bne": "2026-11-09T21:32:11+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R1 2026-11-09: no late price for 6 runner(s)",
+      "raceId": "5639baad-91cc-43b4-9aed-8f3f2d3eb9c2",
+      "key": "nolate:5639baad-91cc-43b4-9aed-8f3f2d3eb9c2"
+    },
+    {
+      "utc": "2026-11-09T11:32:10Z",
+      "bne": "2026-11-09T21:32:10+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Lismore R7 2026-11-09: no late price for 6 runner(s)",
+      "raceId": "ea089f08-250d-41ad-a7a6-f5ac80480ee8",
+      "key": "nolate:ea089f08-250d-41ad-a7a6-f5ac80480ee8"
+    },
+    {
+      "utc": "2026-11-09T11:32:09Z",
+      "bne": "2026-11-09T21:32:09+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Scone R7 2026-11-09: no late price for 14 runner(s)",
+      "raceId": "362e585c-4b92-4e9b-864a-29d372caa5bd",
+      "key": "nolate:362e585c-4b92-4e9b-864a-29d372caa5bd"
+    },
+    {
+      "utc": "2026-11-09T11:32:08Z",
+      "bne": "2026-11-09T21:32:08+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Lismore R6 2026-11-09: no late price for 7 runner(s)",
+      "raceId": "745d6332-332c-4245-81fb-38fbe90f60b4",
+      "key": "nolate:745d6332-332c-4245-81fb-38fbe90f60b4"
+    },
+    {
+      "utc": "2026-11-09T11:32:07Z",
+      "bne": "2026-11-09T21:32:07+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Hamilton R8 2026-11-09: no late price for 15 runner(s)",
+      "raceId": "ecc913c9-542d-492e-851a-0ba685e00730",
+      "key": "nolate:ecc913c9-542d-492e-851a-0ba685e00730"
+    },
+    {
+      "utc": "2026-11-09T11:32:06Z",
+      "bne": "2026-11-09T21:32:06+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Scone R6 2026-11-09: no late price for 13 runner(s)",
+      "raceId": "f3f8cd68-7a25-446c-bebb-c9a0d334319c",
+      "key": "nolate:f3f8cd68-7a25-446c-bebb-c9a0d334319c"
+    },
+    {
+      "utc": "2026-11-09T11:32:05Z",
+      "bne": "2026-11-09T21:32:05+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Lismore R5 2026-11-09: no late price for 8 runner(s)",
+      "raceId": "dcd190db-4b84-4763-83c5-b48d96aa0fef",
+      "key": "nolate:dcd190db-4b84-4763-83c5-b48d96aa0fef"
+    },
+    {
+      "utc": "2026-11-09T11:32:04Z",
+      "bne": "2026-11-09T21:32:04+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Hamilton R7 2026-11-09: no late price for 14 runner(s)",
+      "raceId": "cee53798-0e5c-4bec-a196-e814ea4b1e6b",
+      "key": "nolate:cee53798-0e5c-4bec-a196-e814ea4b1e6b"
+    },
+    {
+      "utc": "2026-11-09T11:32:03Z",
+      "bne": "2026-11-09T21:32:03+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Scone R5 2026-11-09: no late price for 13 runner(s)",
+      "raceId": "83b29408-7aec-44b1-a29e-7d421760268a",
+      "key": "nolate:83b29408-7aec-44b1-a29e-7d421760268a"
+    },
+    {
+      "utc": "2026-11-09T11:32:02Z",
+      "bne": "2026-11-09T21:32:02+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Lismore R4 2026-11-09: no late price for 9 runner(s)",
+      "raceId": "d36817b1-5c2c-4d51-a7d4-c8c41bd43f99",
+      "key": "nolate:d36817b1-5c2c-4d51-a7d4-c8c41bd43f99"
+    },
+    {
+      "utc": "2026-11-09T11:32:01Z",
+      "bne": "2026-11-09T21:32:01+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Hamilton R6 2026-11-09: no late price for 12 runner(s)",
+      "raceId": "9f6a9cb8-6958-4932-8f9b-7677c716f358",
+      "key": "nolate:9f6a9cb8-6958-4932-8f9b-7677c716f358"
+    },
+    {
+      "utc": "2026-11-09T11:32:00Z",
+      "bne": "2026-11-09T21:32:00+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Scone R4 2026-11-09: no late price for 11 runner(s)",
+      "raceId": "342010e3-ab0f-457f-980d-d8d43f95399b",
+      "key": "nolate:342010e3-ab0f-457f-980d-d8d43f95399b"
+    },
+    {
+      "utc": "2026-11-09T11:31:59Z",
+      "bne": "2026-11-09T21:31:59+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Mt Isa R7 2026-11-09: no late price for 5 runner(s)",
+      "raceId": "bc90739e-71de-45ca-90e9-992acf5cf25b",
+      "key": "nolate:bc90739e-71de-45ca-90e9-992acf5cf25b"
+    },
+    {
+      "utc": "2026-11-09T11:31:58Z",
+      "bne": "2026-11-09T21:31:58+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Hamilton R5 2026-11-09: no late price for 15 runner(s)",
+      "raceId": "4aa4da25-bcee-4455-84ed-5ad102a6807d",
+      "key": "nolate:4aa4da25-bcee-4455-84ed-5ad102a6807d"
+    },
+    {
+      "utc": "2026-11-09T11:31:57Z",
+      "bne": "2026-11-09T21:31:57+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Lismore R3 2026-11-09: no late price for 10 runner(s)",
+      "raceId": "6fd0f0bb-3a4d-4b16-9567-c157c9f4ba88",
+      "key": "nolate:6fd0f0bb-3a4d-4b16-9567-c157c9f4ba88"
+    },
+    {
+      "utc": "2026-11-09T11:31:56Z",
+      "bne": "2026-11-09T21:31:56+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Hamilton R4 2026-11-09: no late price for 18 runner(s)",
+      "raceId": "e7f451a4-1801-4e3f-baa3-84305f967632",
+      "key": "nolate:e7f451a4-1801-4e3f-baa3-84305f967632"
+    },
+    {
+      "utc": "2026-11-09T11:31:55Z",
+      "bne": "2026-11-09T21:31:55+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Scone R3 2026-11-09: no late price for 9 runner(s)",
+      "raceId": "01574e67-9e5b-40d0-9a83-371ca382863c",
+      "key": "nolate:01574e67-9e5b-40d0-9a83-371ca382863c"
+    },
+    {
+      "utc": "2026-11-09T11:31:54Z",
+      "bne": "2026-11-09T21:31:54+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Mt Isa R6 2026-11-09: no late price for 5 runner(s)",
+      "raceId": "4379f27d-b5d3-4f06-9e44-6805d781ea43",
+      "key": "nolate:4379f27d-b5d3-4f06-9e44-6805d781ea43"
+    },
+    {
+      "utc": "2026-11-09T11:31:53Z",
+      "bne": "2026-11-09T21:31:53+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Lismore R2 2026-11-09: no late price for 9 runner(s)",
+      "raceId": "db332f1e-798b-40a3-b666-c4f49eceefd8",
+      "key": "nolate:db332f1e-798b-40a3-b666-c4f49eceefd8"
+    },
+    {
+      "utc": "2026-11-09T11:31:52Z",
+      "bne": "2026-11-09T21:31:52+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Hamilton R3 2026-11-09: no late price for 17 runner(s)",
+      "raceId": "391af0fc-67db-4f61-8db0-0a09bb539b4c",
+      "key": "nolate:391af0fc-67db-4f61-8db0-0a09bb539b4c"
+    },
+    {
+      "utc": "2026-11-09T11:31:51Z",
+      "bne": "2026-11-09T21:31:51+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Scone R2 2026-11-09: no late price for 7 runner(s)",
+      "raceId": "08abcd07-9a4c-4593-b88f-4875d778c80f",
+      "key": "nolate:08abcd07-9a4c-4593-b88f-4875d778c80f"
+    },
+    {
+      "utc": "2026-11-09T11:31:50Z",
+      "bne": "2026-11-09T21:31:50+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Mt Isa R5 2026-11-09: no late price for 6 runner(s)",
+      "raceId": "d1dffef3-c053-4598-9b14-4405ee5ea9a1",
+      "key": "nolate:d1dffef3-c053-4598-9b14-4405ee5ea9a1"
+    },
+    {
+      "utc": "2026-11-09T11:31:49Z",
+      "bne": "2026-11-09T21:31:49+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Lismore R1 2026-11-09: no late price for 10 runner(s)",
+      "raceId": "fab2aefa-0d45-47f1-bc2d-887b3d6e7f37",
+      "key": "nolate:fab2aefa-0d45-47f1-bc2d-887b3d6e7f37"
+    },
     {
       "utc": "2026-11-09T03:15:09Z",
       "bne": "2026-11-09T13:15:09+10:00",
