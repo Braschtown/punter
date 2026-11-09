@@ -19,19 +19,18 @@
     },
     "results": {
       "lastRun": {
-        "utc": "2026-11-09T11:31:48Z",
-        "bne": "2026-11-09T21:31:48+10:00"
+        "utc": "2026-11-09T21:37:28Z",
+        "bne": "2026-11-10T07:37:28+10:00"
       },
       "finished": {
-        "utc": "2026-11-09T11:32:18Z",
-        "bne": "2026-11-09T21:32:18+10:00"
+        "utc": "2026-11-09T21:37:32Z",
+        "bne": "2026-11-10T07:37:32+10:00"
       },
       "ok": true,
       "errors": 0,
-      "gaps": 30,
+      "gaps": 4,
       "counts": {
-        "settled": 24,
-        "abandoned": 6
+        "settled": 4
       }
     },
     "analysis": {
@@ -59,12 +58,12 @@
       "state": "OK",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-09T13:50:29Z",
-        "bne": "2026-11-09T23:50:29+10:00"
+        "utc": "2026-11-09T21:37:28Z",
+        "bne": "2026-11-10T07:37:28+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-09T13:50:29Z",
-        "bne": "2026-11-09T23:50:29+10:00"
+        "utc": "2026-11-09T21:37:28Z",
+        "bne": "2026-11-10T07:37:28+10:00"
       }
     },
     "racing-results": {
@@ -73,12 +72,12 @@
       "note": "Results come from the Ladbrokes event feed. Official body pages are linked, not read.",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-09T11:31:48Z",
-        "bne": "2026-11-09T21:31:48+10:00"
+        "utc": "2026-11-09T21:37:28Z",
+        "bne": "2026-11-10T07:37:28+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-09T11:31:48Z",
-        "bne": "2026-11-09T21:31:48+10:00"
+        "utc": "2026-11-09T21:37:28Z",
+        "bne": "2026-11-10T07:37:28+10:00"
       }
     },
     "betfair": {
@@ -88,6 +87,42 @@
     }
   },
   "log": [
+    {
+      "utc": "2026-11-09T21:37:32Z",
+      "bne": "2026-11-10T07:37:32+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R12 2026-11-09: no late price for 7 runner(s)",
+      "raceId": "3728fd5b-0d60-49f5-a3fc-42fcbdd85871",
+      "key": "nolate:3728fd5b-0d60-49f5-a3fc-42fcbdd85871"
+    },
+    {
+      "utc": "2026-11-09T21:37:31Z",
+      "bne": "2026-11-10T07:37:31+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R11 2026-11-09: no late price for 7 runner(s)",
+      "raceId": "8443d020-0cb3-4b9e-bdad-c2c599a4684e",
+      "key": "nolate:8443d020-0cb3-4b9e-bdad-c2c599a4684e"
+    },
+    {
+      "utc": "2026-11-09T21:37:30Z",
+      "bne": "2026-11-10T07:37:30+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R10 2026-11-09: no late price for 7 runner(s)",
+      "raceId": "5a200c61-5c96-4e01-827c-5f53bac54d97",
+      "key": "nolate:5a200c61-5c96-4e01-827c-5f53bac54d97"
+    },
+    {
+      "utc": "2026-11-09T21:37:29Z",
+      "bne": "2026-11-10T07:37:29+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R9 2026-11-09: no late price for 7 runner(s)",
+      "raceId": "2aaf5190-35f3-481f-bcb0-2cfd3eb91dd4",
+      "key": "nolate:2aaf5190-35f3-481f-bcb0-2cfd3eb91dd4"
+    },
     {
       "utc": "2026-11-09T11:32:18Z",
       "bne": "2026-11-09T21:32:18+10:00",
