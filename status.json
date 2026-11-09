@@ -20,17 +20,21 @@
     },
     "results": {
       "lastRun": {
-        "utc": "2026-11-09T00:00:09Z",
-        "bne": "2026-11-09T10:00:09+10:00"
+        "utc": "2026-11-09T03:15:02Z",
+        "bne": "2026-11-09T13:15:02+10:00"
       },
       "finished": {
-        "utc": "2026-11-09T00:00:09Z",
-        "bne": "2026-11-09T10:00:09+10:00"
+        "utc": "2026-11-09T03:15:10Z",
+        "bne": "2026-11-09T13:15:10+10:00"
       },
       "ok": true,
       "errors": 0,
-      "gaps": 0,
-      "counts": {}
+      "gaps": 6,
+      "counts": {
+        "settled": 6,
+        "abandoned": 1,
+        "pending": 1
+      }
     },
     "analysis": {
       "lastRun": {
@@ -57,12 +61,12 @@
       "state": "OK",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-09T02:34:42Z",
-        "bne": "2026-11-09T12:34:42+10:00"
+        "utc": "2026-11-09T03:15:02Z",
+        "bne": "2026-11-09T13:15:02+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-09T02:34:42Z",
-        "bne": "2026-11-09T12:34:42+10:00"
+        "utc": "2026-11-09T03:15:02Z",
+        "bne": "2026-11-09T13:15:02+10:00"
       }
     },
     "racing-results": {
@@ -71,12 +75,12 @@
       "note": "Results come from the Ladbrokes event feed. Official body pages are linked, not read.",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-09T00:00:09Z",
-        "bne": "2026-11-09T10:00:09+10:00"
+        "utc": "2026-11-09T03:15:02Z",
+        "bne": "2026-11-09T13:15:02+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-09T00:00:09Z",
-        "bne": "2026-11-09T10:00:09+10:00"
+        "utc": "2026-11-09T03:15:02Z",
+        "bne": "2026-11-09T13:15:02+10:00"
       }
     },
     "betfair": {
@@ -86,6 +90,60 @@
     }
   },
   "log": [
+    {
+      "utc": "2026-11-09T03:15:09Z",
+      "bne": "2026-11-09T13:15:09+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Hamilton R2 2026-11-09: no late price for 13 runner(s)",
+      "raceId": "448c4866-2f4c-406f-8931-c9362c4d38a8",
+      "key": "nolate:448c4866-2f4c-406f-8931-c9362c4d38a8"
+    },
+    {
+      "utc": "2026-11-09T03:15:08Z",
+      "bne": "2026-11-09T13:15:08+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Scone R1 2026-11-09: no late price for 8 runner(s)",
+      "raceId": "95754f3d-1190-47ca-afc7-ded04ff773b5",
+      "key": "nolate:95754f3d-1190-47ca-afc7-ded04ff773b5"
+    },
+    {
+      "utc": "2026-11-09T03:15:06Z",
+      "bne": "2026-11-09T13:15:06+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Hamilton R1 2026-11-09: no late price for 12 runner(s)",
+      "raceId": "5771dc61-13ef-433a-af0e-ce861b6d9543",
+      "key": "nolate:5771dc61-13ef-433a-af0e-ce861b6d9543"
+    },
+    {
+      "utc": "2026-11-09T03:15:05Z",
+      "bne": "2026-11-09T13:15:05+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Mt Isa R3 2026-11-09: no late price for 6 runner(s)",
+      "raceId": "0300b27f-b41e-48a6-9ddd-71f6b6a8c8d2",
+      "key": "nolate:0300b27f-b41e-48a6-9ddd-71f6b6a8c8d2"
+    },
+    {
+      "utc": "2026-11-09T03:15:04Z",
+      "bne": "2026-11-09T13:15:04+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Mt Isa R2 2026-11-09: no late price for 5 runner(s)",
+      "raceId": "c24ed585-3505-42c9-950d-6d9d7a232c8c",
+      "key": "nolate:c24ed585-3505-42c9-950d-6d9d7a232c8c"
+    },
+    {
+      "utc": "2026-11-09T03:15:03Z",
+      "bne": "2026-11-09T13:15:03+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Mt Isa R1 2026-11-09: no late price for 4 runner(s)",
+      "raceId": "a65749df-4437-42c4-ac2e-54f1a628b8fd",
+      "key": "nolate:a65749df-4437-42c4-ac2e-54f1a628b8fd"
+    },
     {
       "utc": "2026-11-08T17:55:01Z",
       "bne": "2026-11-09T03:55:01+10:00",
