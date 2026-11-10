@@ -2,7 +2,7 @@
 
 Where Punter Lab actually is against [METHOD.md](METHOD.md). Every status below comes from what is in the repo. [`progress.json`](https://github.com/Braschtown/punter/blob/data/progress.json) on the `data` branch mirrors this file for the app. Change both together.
 
-Last checked: 8 Nov 2026, 17:58 UTC (3:58 am Brisbane, 9 Nov).
+Last checked: 10 Nov 2026, 23:40 UTC (9:40 am Brisbane, 11 Nov).
 
 ## Goal
 
@@ -33,9 +33,9 @@ What can be read reliably from a GitHub Actions runner.
 
 Price snapshots, results, timestamps in UTC and Australia/Brisbane.
 
-- **Built:** [`scripts/snapshot.mjs`](../scripts/snapshot.mjs) and [`scripts/results.mjs`](../scripts/results.mjs), run by `snapshot.yml` and `results.yml`. Every capture stores `utc` and `bne`.
-- **Evidence:** manual runs on 8 Nov 2026 committed the first settled races to the `data` branch. Scheduled runs started firing at 17:53 UTC on 8 Nov 2026, after the workflows were recommitted from a linked GitHub identity and re-enabled.
-- **Not yet true:** scheduled capture has not yet covered a full racing day. No runner yet has an early price (30 minutes or more before the jump) or a late price.
+- **Built:** [`scripts/snapshot.mjs`](../scripts/snapshot.mjs) and [`scripts/results.mjs`](../scripts/results.mjs), run on a timer by [`scripts/collect-loop.sh`](../scripts/collect-loop.sh) inside `collect.yml`. Every capture stores `utc` and `bne`.
+- **Evidence:** manual runs on 8 Nov 2026 committed the first settled races to the `data` branch. Scheduled runs started firing at 17:53 UTC on 8 Nov 2026, but GitHub dropped most of them: 11 of roughly 400 expected snapshot runs and 9 results runs by 20:46 UTC on 10 Nov. On 11 Nov 2026 (Brisbane) the cron schedules were replaced by `collect.yml`, a long-running loop that restarts itself.
+- **Not yet true:** the new loop has not yet covered a full racing day. No runner yet has an early price (30 minutes or more before the jump) or a late price.
 - **Gate:** scheduled snapshot and results runs firing on every racing day, with early and late prices captured for most runners.
 
 ### 3. Market diagnostics: in progress
@@ -97,6 +97,7 @@ Fractional Kelly with the four rules in Part 6 of METHOD.md.
 ## Current blockers
 
 - **No Betfair SP capture,** so there is no benchmark to measure any model against. Betfair blocks GitHub-hosted runners.
+- **Collection not yet proven.** GitHub dropped most cron runs, so collection moved to a self-restarting loop on 11 Nov 2026. It is only proven once it has covered a full racing day.
 - **Racing Queensland form pages.** Racing Queensland appears to render fields and start times via JavaScript, which an Actions runner may not be able to read. Fields and start times currently come from Ladbrokes, so this mainly blocks form data for the feature store.
 
 ## Rules
