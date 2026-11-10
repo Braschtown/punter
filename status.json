@@ -19,18 +19,19 @@
     },
     "results": {
       "lastRun": {
-        "utc": "2026-11-09T21:37:28Z",
-        "bne": "2026-11-10T07:37:28+10:00"
+        "utc": "2026-11-10T02:54:50Z",
+        "bne": "2026-11-10T12:54:50+10:00"
       },
       "finished": {
-        "utc": "2026-11-09T21:37:32Z",
-        "bne": "2026-11-10T07:37:32+10:00"
+        "utc": "2026-11-10T02:54:53Z",
+        "bne": "2026-11-10T12:54:53+10:00"
       },
       "ok": true,
       "errors": 0,
-      "gaps": 4,
+      "gaps": 2,
       "counts": {
-        "settled": 4
+        "settled": 2,
+        "pending": 1
       }
     },
     "analysis": {
@@ -58,12 +59,12 @@
       "state": "OK",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-09T23:22:50Z",
-        "bne": "2026-11-10T09:22:50+10:00"
+        "utc": "2026-11-10T02:54:50Z",
+        "bne": "2026-11-10T12:54:50+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-09T23:22:50Z",
-        "bne": "2026-11-10T09:22:50+10:00"
+        "utc": "2026-11-10T02:54:50Z",
+        "bne": "2026-11-10T12:54:50+10:00"
       }
     },
     "racing-results": {
@@ -72,12 +73,12 @@
       "note": "Results come from the Ladbrokes event feed. Official body pages are linked, not read.",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-09T21:37:28Z",
-        "bne": "2026-11-10T07:37:28+10:00"
+        "utc": "2026-11-10T02:54:50Z",
+        "bne": "2026-11-10T12:54:50+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-09T21:37:28Z",
-        "bne": "2026-11-10T07:37:28+10:00"
+        "utc": "2026-11-10T02:54:50Z",
+        "bne": "2026-11-10T12:54:50+10:00"
       }
     },
     "betfair": {
@@ -87,6 +88,24 @@
     }
   },
   "log": [
+    {
+      "utc": "2026-11-10T02:54:52Z",
+      "bne": "2026-11-10T12:54:52+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Mornington R1 2026-11-10: no late price for 14 runner(s)",
+      "raceId": "e48ef7ef-a2f4-4db7-b2dc-f8b23c2e01c9",
+      "key": "nolate:e48ef7ef-a2f4-4db7-b2dc-f8b23c2e01c9"
+    },
+    {
+      "utc": "2026-11-10T02:54:51Z",
+      "bne": "2026-11-10T12:54:51+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Queanbeyan R1 2026-11-10: no late price for 9 runner(s)",
+      "raceId": "7824fe7a-6892-475a-bad8-568439055d50",
+      "key": "nolate:7824fe7a-6892-475a-bad8-568439055d50"
+    },
     {
       "utc": "2026-11-09T21:37:32Z",
       "bne": "2026-11-10T07:37:32+10:00",
