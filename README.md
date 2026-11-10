@@ -9,8 +9,10 @@ It covers thoroughbreds at all Australian meetings, plus greyhounds at The Q (Q1
 ## How it works
 
 - **Collection (GitHub Actions, on `main`)**
-  - `snapshot.yml` runs every 5 minutes during racing hours. It records each runner's early price (first sighting) and late price (closest to 10 minutes before the jump).
-  - `results.yml` runs every 15 minutes. It records winners, placings, final prices and scratchings, and settles open paper bets.
+  - `collect.yml` runs one long job (about 5 hours 40 minutes) that loops on a timer, then starts its own replacement. GitHub dropped most runs of frequent cron schedules, so the timing lives in [`scripts/collect-loop.sh`](scripts/collect-loop.sh) instead. An hourly cron restarts the chain if it ever breaks.
+  - Every 5 minutes during racing hours it takes a price snapshot: each runner's early price (first sighting) and late price (closest to 10 minutes before the jump).
+  - Every 15 minutes it records results (winners, placings, final prices and scratchings), settles open paper bets and recomputes the analysis.
+  - `snapshot.yml`, `results.yml` and `analysis.yml` run one pass each, by hand only.
 - **Data (the `data` branch)**
   - The jobs commit JSON to a separate branch so `main` stays readable.
   - It also avoids GitHub Pages rebuilding on every data commit, because Pages has a soft limit of 10 builds an hour.
@@ -73,7 +75,7 @@ The app blocks any pick that would take the week (Monday to Sunday, Brisbane) ov
 
 ## How to read the results
 
-The analysis job (`analysis.yml`, after every results run and nightly) writes `analysis.json` on the `data` branch. Thoroughbreds and greyhounds are always reported separately.
+The analysis pass (in `collect.yml` after every results pass, or `analysis.yml` by hand) writes `analysis.json` on the `data` branch. Thoroughbreds and greyhounds are always reported separately.
 
 ### Words used
 

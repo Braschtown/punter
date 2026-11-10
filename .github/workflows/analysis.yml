@@ -1,14 +1,8 @@
 name: Recompute analysis
 
-# After every results run, plus a nightly pass at 07:00 Brisbane (21:00 UTC).
-# GitHub runs schedules as the last person to commit this file, so commit it from a git
-# identity linked to a GitHub account, or the schedule silently never fires.
+# Manual runs only. collect.yml recomputes the analysis after every results pass, so a
+# separate trigger here would only race it for the data branch.
 on:
-  workflow_run:
-    workflows: ['Record results']
-    types: [completed]
-  schedule:
-    - cron: '0 21 * * *'
   workflow_dispatch:
 
 permissions:

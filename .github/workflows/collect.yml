@@ -1,0 +1,44 @@
+name: Collect
+
+# One long job that runs snapshot, results and analysis on a timer (see scripts/collect-loop.sh),
+# then starts its own replacement. GitHub drops most runs of frequent cron schedules, but a
+# workflow_dispatch from the job itself is not throttled, so the chain keeps collection running.
+# The hourly cron is only a backup that restarts the chain if it breaks. While a run is active,
+# backup runs wait as pending and are replaced, so some cancelled runs in the list are expected.
+# GitHub runs schedules as the last person to commit this file, so commit it from a git
+# identity linked to a GitHub account, or the schedule silently never fires.
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: bash scripts/collect-loop.sh 340
+        env:
+          LADBROKES_FROM: ${{ secrets.LADBROKES_FROM || vars.LADBROKES_FROM }}
+      - name: Start the next run
+        if: ${{ !cancelled() }}
+        run: gh workflow run collect.yml --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}

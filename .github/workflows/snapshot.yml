@@ -1,14 +1,8 @@
 name: Snapshot prices
 
-# Brisbane is UTC+10 all year. Every 5 minutes from 10:00 to 23:59 Brisbane (00:00-13:59 UTC),
-# then hourly overnight to catch early prices for the next day. Runs can be late or skipped;
-# every capture stores its real timestamp and minutes to jump.
-# GitHub runs schedules as the last person to commit this file, so commit it from a git
-# identity linked to a GitHub account, or the schedule silently never fires.
+# Manual runs only. Timed collection runs in collect.yml, because GitHub dropped most runs of
+# this workflow's 5-minute cron schedule.
 on:
-  schedule:
-    - cron: '*/5 0-13 * * *'
-    - cron: '7 14-23 * * *'
   workflow_dispatch:
 
 permissions:
