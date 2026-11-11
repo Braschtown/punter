@@ -6,6 +6,18 @@ It covers thoroughbreds at all Australian meetings, plus greyhounds at The Q (Q1
 
 **Paper trading only.** Punter Lab never places bets, never stores logins and never asks for credentials.
 
+**Open the app:** https://braschtown.github.io/punter/
+
+| Screen | Link | What it shows |
+|---|---|---|
+| Today | [#/today](https://braschtown.github.io/punter/#/today) | The next races to jump and this week's paper stake |
+| Ledger | [#/ledger](https://braschtown.github.io/punter/#/ledger) | Paper profit and loss, open and settled bets, export |
+| Tests | [#/tests](https://braschtown.github.io/punter/#/tests) | Market tests: price lag, favourite-longshot bias, overround |
+| Forward tests | [#/forward](https://braschtown.github.io/punter/#/forward) | The forward-test dashboard: filter, break down and export |
+| Notes | [#/notes](https://braschtown.github.io/punter/#/notes) | Real-bet record, replay notes and stewards' report links |
+| Status | [#/status](https://braschtown.github.io/punter/#/status) | Each data source, job run times, gaps and errors |
+| Method | [#/method](https://braschtown.github.io/punter/#/method) | The method, phase progress and blockers |
+
 ## How it works
 
 - **Collection (GitHub Actions, on `main`)**
@@ -106,10 +118,25 @@ The analysis pass (in `collect.yml` after every results pass, or `analysis.yml` 
 
 Fixed rules, defined in [`scripts/lib/forward.mjs`](scripts/lib/forward.mjs), that each log a $1 paper bet about 10 minutes before every jump, on every race they apply to. They ignore the weekly cap: they are a measurement ledger, not a betting plan. Because the pick is locked before the race, nothing can be fitted to the result afterwards.
 
-- **Tests:** favourite; every runner in metro races, in country and provincial races, and in all races combined; first, second and third up; biggest firmer and biggest drifter since we first saw the price; every runner under $3; box 1 at Q1 and Q2; speed map leaders.
+- **Tests:** each one is $1 on every runner that matches, unless it says otherwise.
+
+  | Test | Id | Picks | Codes |
+  |---|---|---|---|
+  | Favourite | `favourite` | The favourite at pick time. Tied favourites share the $1. | Both |
+  | Every runner, metro | `metro-all` | Every runner at the metropolitan tracks listed in `METRO_TRACKS`. | Thoroughbreds |
+  | Every runner, country and provincial | `nonmetro-all` | Every runner at all other tracks. | Thoroughbreds |
+  | Every runner, all tracks | `all-runners` | Every runner in every race, metro and country combined. The overall measure of the bookmaker's margin. | Both, read separately |
+  | First up, second up, third up | `first-up`, `second-up`, `third-up` | Runners having their first, second or third run back from a spell. | Thoroughbreds |
+  | Biggest firmer | `firmer` | The runner whose implied probability rose most since we first saw it (at least 30 minutes out), if by 10% or more. | Both |
+  | Biggest drifter | `drifter` | The same, for the biggest fall. | Both |
+  | Under $3 | `under-3` | Every runner priced under $3.00. | Both |
+  | Box 1, Q1 and Q2 | `box-1` | The box 1 greyhound at Q1 Lakeside and Q2 Parklands. | Greyhounds |
+  | Speed map leader | `leader` | Runners the Ladbrokes speed map has leading. | Thoroughbreds |
+
+  The three every-runner tests are controls more than strategies: they show the margin a punter pays. The all-tracks result is mostly the other two added together, so it is not independent evidence. Tests only log bets from the moment they were added (all on 11 November 2026; the two country and all-tracks tests started that evening).
 - **Stored:** `forward/DATE.json` holds each race's locked record: race details, every runner's price, early price and Ladbrokes form (recent starts, weight, claim, jockey, trainer, speed map, form flags), plus Ladbrokes "big bets" data when it is published. `forward-report/` holds the summary and the monthly datasets the app reads.
 - **Price beaten:** for every bet, whether the price taken was longer than the closing price. A test that keeps beating the close is the earliest sign of an edge.
-- **Verdicts:** judged exactly like the market tests (300 races, out of sample, against the favourite and random baselines). The dashboard (Tests > Forward tests) lets you filter and break any test down by track, condition, distance, class, jockey and more, but filtered views never get a verdict.
+- **Verdicts:** judged exactly like the market tests (300 races, out of sample, against the favourite and random baselines). The [dashboard](https://braschtown.github.io/punter/#/forward) (Tests > Forward tests) lets you filter and break any test down by track, condition, distance, class, jockey and more, but filtered views never get a verdict.
 - **Changing a test:** never edit a test's rule once it has data. Add a new test with a new id and date instead.
 
 ### Baselines
