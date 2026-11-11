@@ -4,6 +4,7 @@ import { getJson } from '../lib/data.js';
 import { barChart } from '../lib/chart.js';
 import { icon } from '../lib/icons.js';
 import { esc, fmtPct, fmtSignedPct } from '../lib/format.js';
+import { segmented } from './forward.js';
 
 const CODES = [['thoroughbred', 'Thoroughbred'], ['greyhound', 'Greyhound']];
 let code = 'thoroughbred';
@@ -88,6 +89,7 @@ export async function render(root, ui) {
     const byId = Object.fromEntries(tests.map((t) => [t.id, t]));
     const get = (id) => byId[id]?.byCode?.[code];
     root.innerHTML = `
+      ${segmented('tests')}
       <p class="t-body muted" style="margin:0">No verdict until each test has ${min} races.</p>
       <div class="chips" role="group" aria-label="Racing code">
         ${CODES.map(([id, label]) => `<button class="chip" type="button" data-code="${id}" aria-pressed="${code === id}">${code === id ? icon('check') : ''}${label}</button>`).join('')}

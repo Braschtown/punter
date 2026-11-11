@@ -8,6 +8,7 @@ import * as tests from './screens/tests.js';
 import * as notes from './screens/notes.js';
 import * as status from './screens/status.js';
 import * as method from './screens/method.js';
+import * as forward from './screens/forward.js';
 
 const ROUTES = {
   today: { title: 'Today', label: 'Today', icon: 'today', screen: today },
@@ -16,6 +17,8 @@ const ROUTES = {
   notes: { title: 'Notes', label: 'Notes', icon: 'notes', screen: notes },
   status: { title: 'Status', label: 'Status', icon: 'status', screen: status },
   method: { title: 'Method', label: 'Method', icon: 'method', screen: method },
+  // Reached from the Tests screen, not the bottom bar.
+  forward: { title: 'Forward tests', label: 'Forward', icon: 'tests', screen: forward, nav: 'tests', hidden: true, wide: true },
 };
 
 const main = document.getElementById('main');
@@ -25,7 +28,7 @@ const titleEl = document.getElementById('page-title');
 let current = null;
 let renderToken = 0;
 
-nav.innerHTML = Object.entries(ROUTES).map(([id, r]) => `
+nav.innerHTML = Object.entries(ROUTES).filter(([, r]) => !r.hidden).map(([id, r]) => `
   <a href="#/${id}" data-route="${id}">
     <span class="ind">${icon(r.icon)}</span>
     <span>${r.label}</span>
@@ -67,8 +70,9 @@ async function render() {
   current = route;
   titleEl.textContent = route.title;
   document.title = route.title === 'Today' ? 'Punter Lab' : `${route.title} · Punter Lab`;
+  document.body.classList.toggle('wide-route', !!route.wide);
   for (const a of nav.querySelectorAll('a')) {
-    if (a.dataset.route === routeId) a.setAttribute('aria-current', 'page');
+    if (a.dataset.route === (route.nav || routeId)) a.setAttribute('aria-current', 'page');
     else a.removeAttribute('aria-current');
   }
   ui.setFab(null);
