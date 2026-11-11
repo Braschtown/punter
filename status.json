@@ -2,65 +2,67 @@
   "jobs": {
     "snapshot": {
       "lastRun": {
-        "utc": "2026-11-11T08:05:00Z",
-        "bne": "2026-11-11T18:05:00+10:00"
+        "utc": "2026-11-11T08:10:00Z",
+        "bne": "2026-11-11T18:10:00+10:00"
       },
       "finished": {
-        "utc": "2026-11-11T08:05:05Z",
-        "bne": "2026-11-11T18:05:05+10:00"
+        "utc": "2026-11-11T08:10:18Z",
+        "bne": "2026-11-11T18:10:18+10:00"
       },
       "ok": true,
       "errors": 0,
       "gaps": 0,
       "counts": {
-        "lateCaptures": 2,
-        "earlyChecks": 1,
+        "lateCaptures": 1,
+        "racesPicked": 1,
+        "picks": 17,
+        "earlyChecks": 14,
         "races": 112
       }
     },
     "results": {
       "lastRun": {
-        "utc": "2026-11-11T07:50:23Z",
-        "bne": "2026-11-11T17:50:23+10:00"
+        "utc": "2026-11-11T08:10:18Z",
+        "bne": "2026-11-11T18:10:18+10:00"
       },
       "finished": {
-        "utc": "2026-11-11T07:50:26Z",
-        "bne": "2026-11-11T17:50:26+10:00"
+        "utc": "2026-11-11T08:10:21Z",
+        "bne": "2026-11-11T18:10:21+10:00"
       },
       "ok": true,
       "errors": 0,
-      "gaps": 2,
+      "gaps": 1,
       "counts": {
-        "settled": 1,
-        "abandoned": 2
+        "settled": 2,
+        "abandoned": 1
       }
     },
     "analysis": {
       "lastRun": {
-        "utc": "2026-11-11T07:50:26Z",
-        "bne": "2026-11-11T17:50:26+10:00"
+        "utc": "2026-11-11T08:10:21Z",
+        "bne": "2026-11-11T18:10:21+10:00"
       },
       "finished": {
-        "utc": "2026-11-11T07:50:26Z",
-        "bne": "2026-11-11T17:50:26+10:00"
+        "utc": "2026-11-11T08:10:21Z",
+        "bne": "2026-11-11T18:10:21+10:00"
       },
       "ok": true,
       "errors": 0,
       "gaps": 0,
       "counts": {
         "updated": 1,
-        "thoroughbredRaces": 105,
+        "thoroughbredRaces": 107,
         "greyhoundRaces": 46
       }
     },
     "forward": {
       "lastRun": {
-        "utc": "2026-11-11T07:50:26Z",
-        "bne": "2026-11-11T17:50:26+10:00"
+        "utc": "2026-11-11T08:10:21Z",
+        "bne": "2026-11-11T18:10:21+10:00"
       },
       "finished": {
-        "utc": "2026-11-11T07:50:27Z",
-        "bne": "2026-11-11T17:50:27+10:00"
+        "utc": "2026-11-11T08:10:21Z",
+        "bne": "2026-11-11T18:10:21+10:00"
       },
       "ok": true,
       "errors": 0,
@@ -68,7 +70,7 @@
       "counts": {
         "updated": 1,
         "days": 1,
-        "settledBets": 442
+        "settledBets": 475
       }
     }
   },
@@ -78,12 +80,12 @@
       "state": "OK",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-11T08:05:00Z",
-        "bne": "2026-11-11T18:05:00+10:00"
+        "utc": "2026-11-11T08:10:18Z",
+        "bne": "2026-11-11T18:10:18+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-11T08:05:00Z",
-        "bne": "2026-11-11T18:05:00+10:00"
+        "utc": "2026-11-11T08:10:18Z",
+        "bne": "2026-11-11T18:10:18+10:00"
       }
     },
     "racing-results": {
@@ -92,12 +94,12 @@
       "note": "Results come from the Ladbrokes event feed. Official body pages are linked, not read.",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-11T07:50:23Z",
-        "bne": "2026-11-11T17:50:23+10:00"
+        "utc": "2026-11-11T08:10:18Z",
+        "bne": "2026-11-11T18:10:18+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-11T07:50:23Z",
-        "bne": "2026-11-11T17:50:23+10:00"
+        "utc": "2026-11-11T08:10:18Z",
+        "bne": "2026-11-11T18:10:18+10:00"
       }
     },
     "betfair": {
@@ -107,6 +109,15 @@
     }
   },
   "log": [
+    {
+      "utc": "2026-11-11T08:10:21Z",
+      "bne": "2026-11-11T18:10:21+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R12 2026-11-11: no late price for 8 runner(s)",
+      "raceId": "ca58929b-4975-4b12-89af-1924d58302f3",
+      "key": "nolate:ca58929b-4975-4b12-89af-1924d58302f3"
+    },
     {
       "utc": "2026-11-11T07:50:26Z",
       "bne": "2026-11-11T17:50:26+10:00",
