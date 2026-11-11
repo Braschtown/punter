@@ -88,13 +88,11 @@ async function render() {
 }
 
 main.addEventListener('click', (e) => {
-  if (e.target.closest('[data-action="retry"]')) installTooltips();
-render();
+  if (e.target.closest('[data-action="retry"]')) render();
 });
 
 window.addEventListener('hashchange', () => {
-  installTooltips();
-render();
+  render();
   main.focus({ preventScroll: true });
   window.scrollTo(0, 0);
 });
