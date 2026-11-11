@@ -325,3 +325,14 @@ dialog form { display: flex; flex-direction: column; gap: 16px; }
 .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip.input { padding-right: 6px; }
 .chip.input .x { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 12px; }
+.tip-float {
+  position: fixed; z-index: 50; pointer-events: none; max-width: 260px;
+  background: var(--surface-highest); color: var(--on-surface); border-radius: 8px; padding: 8px 10px;
+  font: 400 12px/18px var(--font); white-space: pre-line; box-shadow: var(--fab-shadow);
+}
+.tip-float::first-line { font-weight: 700; }
+.chart .hit-bar { cursor: pointer; outline: none; }
+.chart .hit-bar:focus-visible { stroke: var(--primary); stroke-width: 2; }
+.hb-row { cursor: pointer; border-radius: 6px; }
+.hb-row:hover { background: rgba(224, 227, 223, .05); }
+.hb-row:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }

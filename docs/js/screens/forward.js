@@ -212,6 +212,15 @@ const ciText = (ci) => (ci ? `${fmtSignedPct(ci[0], 0)} to ${fmtSignedPct(ci[1],
 /** ROI with its interval underneath, for table cells. */
 const roiCell = (s) => `${esc(roiText(s))}${s.ci ? `<br><span class="hint">${esc(ciText(s.ci))}</span>` : ''}`;
 const verdictBadge = (v) => `<span class="badge ${VERDICT_BADGE[v] || 'outlined'}">${esc(v || 'Insufficient data')}</span>`;
+/** Multi-line tooltip text for one group's bar. */
+const barTip = (label, st) => [
+  label,
+  `ROI ${roiText(st)}${st.ci ? ` (95%: ${ciText(st.ci)})` : ''}`,
+  `${plural(st.bets, 'bet')}, ${plural(st.wins, 'win')}${st.strike !== null ? ` (${fmtPct(st.strike, 1)} strike)` : ''}`,
+  st.beat !== null ? `Beat the close ${fmtPct(st.beat, 0)} of the time` : 'No closing prices yet',
+  `Profit ${money(st.bets ? st.profit : null)} on ${fmtMoney(st.staked)}`,
+  ...(st.bets < FEW ? [`Fewer than ${FEW} bets: treat as noise`] : []),
+].join('\n');
 const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 const tile = (label, value, hint) => `<div class="tile"><p class="t-label">${esc(label)}</p><span class="v">${value}</span><span class="hint">${hint}</span></div>`;
 
@@ -321,7 +330,7 @@ function overview(tests, bets, state) {
   if (!rows.length) return '<section class="card"><p class="empty-state" style="margin:0">No bets for this code and period yet.</p></section>';
   const chart = hBarChart(rows.map((r) => ({
     label: r.t.name, value: r.s.roi, n: r.s.bets, solid: r.s.bets >= FEW,
-    tip: `${r.t.name}: ROI ${roiText(r.s)} on ${r.s.bets} bets (${ciText(r.s.ci)})`,
+    tip: barTip(r.t.name, r.s),
   })), { format: (v) => fmtSignedPct(v, 0), title: 'Return on $1 bets by test' });
   return `
     <section class="card" aria-labelledby="ov-h">
@@ -420,7 +429,7 @@ function breakdown(bets, state) {
   const head = (id, label) => `<th scope="col" aria-sort="${state.sort === id ? 'descending' : 'none'}"><button type="button" data-sort="${id}">${esc(label)}${state.sort === id ? ' ▾' : ''}</button></th>`;
   const chartRows = rows.slice(0, 15).map((g) => ({
     label: g.label, value: g.s.roi, n: g.s.bets, solid: g.s.bets >= FEW,
-    tip: `${g.label}: ROI ${roiText(g.s)} on ${g.s.bets} bets (${ciText(g.s.ci)})`,
+    tip: barTip(g.label, g.s),
   }));
   return `<section class="card" aria-labelledby="bd-h">
     <h2 class="t-card" id="bd-h">By ${esc(dim.label.toLowerCase())}</h2>

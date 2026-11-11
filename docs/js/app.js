@@ -2,6 +2,7 @@
 
 import { icon } from './lib/icons.js';
 import { esc } from './lib/format.js';
+import { installTooltips } from './lib/chart.js';
 import * as today from './screens/today.js';
 import * as ledger from './screens/ledger.js';
 import * as tests from './screens/tests.js';
@@ -87,12 +88,15 @@ async function render() {
 }
 
 main.addEventListener('click', (e) => {
-  if (e.target.closest('[data-action="retry"]')) render();
+  if (e.target.closest('[data-action="retry"]')) installTooltips();
+render();
 });
 
 window.addEventListener('hashchange', () => {
-  render();
+  installTooltips();
+render();
   main.focus({ preventScroll: true });
   window.scrollTo(0, 0);
 });
+installTooltips();
 render();

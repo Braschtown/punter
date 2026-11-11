@@ -36,7 +36,9 @@ export function barChart(groups, { format, title, emptyGroups = 4 }) {
       }
       const top = Math.min(y(val.v), zeroY);
       const h = Math.max(1, Math.abs(y(val.v) - zeroY));
-      bars += `<rect class="bar ${val.cls || ''}" x="${x + 1}" y="${top}" width="${bw - 2}" height="${h}" rx="3"><title>${esc(`${g.label}${val.name ? ` ${val.name}` : ''}: ${format(val.v)}`)}</title></rect>`;
+      const tip = val.tip || `${g.label}${val.name ? ` ${val.name}` : ''}\n${format(val.v)}`;
+      bars += `<rect class="bar ${val.cls || ''}" x="${x + 1}" y="${top}" width="${bw - 2}" height="${h}" rx="3" pointer-events="none"/>`;
+      bars += `<rect class="hit-bar" x="${x}" y="${PAD.top}" width="${bw}" height="${H - PAD.top - PAD.bottom}" fill="transparent" tabindex="0" data-tip="${esc(tip)}" aria-label="${esc(tip.replace(/\n/g, '. '))}"/>`;
       if (g.values.length === 1 || per <= 2) {
         const ty = val.v >= 0 ? top - 4 : top + h + 12;
         if (per === 1) bars += `<text x="${x + bw / 2}" y="${ty}" text-anchor="middle">${esc(format(val.v))}</text>`;
@@ -154,9 +156,66 @@ export function hBarChart(rows, { format, title }) {
     const ok = r.value !== null && Number.isFinite(r.value);
     const a = ok ? Math.min(pos(r.value), zero) : zero;
     const w = ok ? Math.max(0.5, Math.abs(pos(r.value) - zero)) : 0;
-    return `<div class="hb-row" title="${esc(r.tip)}">
+    return `<div class="hb-row" tabindex="0" data-tip="${esc(r.tip)}" aria-label="${esc(r.tip.replace(/\n/g, '. '))}">
       <span class="hb-label">${esc(r.label)}</span>
       <span class="hb-track"><span class="hb-zero" style="left:${zero}%"></span>${ok ? `<span class="hb-bar${r.solid ? '' : ' thin'}" style="left:${a}%;width:${w}%"></span>` : ''}</span>
       <span class="hb-val">${ok ? esc(format(r.value)) : '-'}</span></div>`;
   }).join('')}</div>`;
+}
+
+/**
+ * One shared tooltip for every element with a `data-tip` attribute (plain text, new lines allowed).
+ * Shows on mouse hover, on touch, and on keyboard focus. Escape, scrolling or touching elsewhere hides it.
+ * Call once when the app starts.
+ */
+export function installTooltips() {
+  const box = document.createElement('div');
+  box.className = 'tip-float';
+  box.setAttribute('role', 'tooltip');
+  box.hidden = true;
+  document.body.append(box);
+  let current = null;
+
+  const place = (x, y) => {
+    const pad = 12;
+    const w = box.offsetWidth;
+    const h = box.offsetHeight;
+    let left = x - w / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - w - 8));
+    let top = y - h - pad;
+    if (top < 8) top = y + pad + 8;
+    box.style.left = `${left}px`;
+    box.style.top = `${top}px`;
+  };
+  const show = (el, x, y) => {
+    current = el;
+    box.textContent = el.dataset.tip;
+    box.hidden = false;
+    if (x === undefined) {
+      const r = el.getBoundingClientRect();
+      place(r.left + r.width / 2, r.top);
+    } else place(x, y);
+  };
+  const hide = () => { current = null; box.hidden = true; };
+
+  document.addEventListener('pointerover', (e) => {
+    const el = e.target.closest?.('[data-tip]');
+    if (el && e.pointerType === 'mouse') show(el, e.clientX, e.clientY);
+  });
+  document.addEventListener('pointermove', (e) => {
+    if (current && e.pointerType === 'mouse') {
+      if (!current.contains(e.target)) hide();
+      else place(e.clientX, e.clientY);
+    }
+  });
+  document.addEventListener('pointerdown', (e) => {
+    const el = e.target.closest?.('[data-tip]');
+    if (el) show(el, e.clientX, e.clientY);
+    else hide();
+  });
+  document.addEventListener('focusin', (e) => { const el = e.target.closest?.('[data-tip]'); if (el) show(el); });
+  document.addEventListener('focusout', (e) => { if (e.target === current) hide(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hide(); });
+  window.addEventListener('scroll', hide, { passive: true });
+  window.addEventListener('hashchange', hide);
 }

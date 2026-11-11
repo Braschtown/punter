@@ -26,12 +26,15 @@ const roiOf = (x) => x?.all?.roi ?? null;
 const roiN = (x) => x?.all?.races ?? 0;
 const ciText = (ci) => (ci ? ` (95% interval ${fmtSignedPct(ci[0], 0)} to ${fmtSignedPct(ci[1], 0)})` : '');
 
+/** Tooltip text for a flat-stake ROI bar. */
+const roiTip = (title, x) => [title, `ROI ${fmtSignedPct(roiOf(x), 1)}${x?.all?.ci ? ` (95%: ${fmtSignedPct(x.all.ci[0], 0)} to ${fmtSignedPct(x.all.ci[1], 0)})` : ''}`, `${roiN(x)} races`].join('\n');
+
 function lagCard(t, d, base, min) {
   const chart = barChart([
-    { label: 'Early', values: [{ v: roiOf(d?.roiEarly) }] },
-    { label: 'Close', values: [{ v: roiOf(d?.roiClose), cls: 'alt' }] },
-    { label: 'Fav', values: [{ v: roiOf(base?.favourite), cls: 'alt' }] },
-    { label: 'Random', values: [{ v: roiOf(base?.random), cls: 'alt' }] },
+    { label: 'Early', values: [{ v: roiOf(d?.roiEarly), tip: roiTip('Back every runner at the early price', d?.roiEarly) }] },
+    { label: 'Close', values: [{ v: roiOf(d?.roiClose), cls: 'alt', tip: roiTip('The same runners at the closing price', d?.roiClose) }] },
+    { label: 'Fav', values: [{ v: roiOf(base?.favourite), cls: 'alt', tip: roiTip('Baseline: back the closing favourite', base?.favourite) }] },
+    { label: 'Random', values: [{ v: roiOf(base?.random), cls: 'alt', tip: roiTip('Baseline: a random runner (exact average)', base?.random) }] },
   ], { format: (v) => fmtSignedPct(v, 0), title: 'Flat-stake ROI: early price, close price and baselines', emptyGroups: 4 });
   const facts = d?.runners ? `<p class="hint" style="margin:0">${d.runners} runners in ${d.n} races. Early price longer than the close for ${esc(fmtPct(d.pctEarlyLonger, 0))}. Mean drift in implied probability ${esc(fmtSignedPct(d.meanDrift, 2))}.</p>
     <p class="hint" style="margin:0">ROI at early price ${esc(fmtSignedPct(roiOf(d.roiEarly)))}${esc(ciText(d.roiEarly?.all?.ci))}.</p>` : '<p class="hint" style="margin:0">No runners with a price captured at least 30 minutes before the jump yet.</p>';
@@ -42,7 +45,10 @@ function flbCard(t, d, min) {
   const bands = d?.bands?.filter((b) => b.runners > 0) || [];
   const chart = barChart(bands.map((b) => ({
     label: b.band.replace('$', ''),
-    values: [{ v: b.impliedPct, cls: 'alt', name: 'implied' }, { v: b.actualPct, name: 'actual' }],
+    values: [
+      { v: b.impliedPct, cls: 'alt', tip: `${b.band}: implied by price\n${fmtPct(b.impliedPct, 1)} win chance on average\n${b.runners} runners` },
+      { v: b.actualPct, tip: `${b.band}: actual win rate\n${b.wins ?? '?'} of ${b.runners} won (${fmtPct(b.actualPct, 1)})${b.actualCi ? `\n95%: ${fmtPct(b.actualCi[0], 0)} to ${fmtPct(b.actualCi[1], 0)}` : ''}` },
+    ],
   })), { format: (v) => fmtPct(v, 0), title: 'Implied versus actual win rate by price band', emptyGroups: 6 });
   const best = d?.bestBandInSample;
   const facts = bands.length
@@ -53,7 +59,10 @@ function flbCard(t, d, min) {
 
 function overroundCard(t, d, min) {
   const tracks = (d?.byTrack || []).slice(0, 6);
-  const chart = barChart(tracks.map((x) => ({ label: x.track.length > 9 ? `${x.track.slice(0, 8)}.` : x.track, values: [{ v: x.mean }] })),
+  const chart = barChart(tracks.map((x) => ({
+    label: x.track.length > 9 ? `${x.track.slice(0, 8)}.` : x.track,
+    values: [{ v: x.mean, tip: `${x.track}\nAverage overround ${fmtPct(x.mean, 1)} at the close\n${x.races} races` }],
+  })),
     { format: (v) => fmtPct(v, 0), title: 'Average overround by track at the close', emptyGroups: 5 });
   const facts = d?.close?.races
     ? `<p class="hint" style="margin:0">Average book at the close ${esc(fmtPct(1 + d.close.mean, 1))} (overround ${esc(fmtPct(d.close.mean, 1))})${esc(ciText(d.close.ci))}, ${d.close.races} races.${d.late?.races ? ` At the late price ${esc(fmtPct(d.late.mean, 1))}, ${d.late.races} races.` : ''}</p>`
