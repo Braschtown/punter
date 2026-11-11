@@ -1,7 +1,7 @@
 {
   "generated": {
-    "utc": "2026-11-11T02:45:07Z",
-    "bne": "2026-11-11T12:45:07+10:00"
+    "utc": "2026-11-11T03:00:03Z",
+    "bne": "2026-11-11T13:00:03+10:00"
   },
   "minRaces": 300,
   "stake": 1,
@@ -18,7 +18,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 1,
-          "open": 0,
+          "open": 1,
           "races": 1,
           "wins": 1,
           "staked": 1,
@@ -135,7 +135,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 1,
-          "open": 0,
+          "open": 1,
           "races": 1,
           "wins": 1,
           "staked": 1,
@@ -183,7 +183,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 1,
-          "open": 0,
+          "open": 1,
           "races": 1,
           "wins": 0,
           "staked": 1,
@@ -231,7 +231,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 1,
-          "open": 0,
+          "open": 2,
           "races": 1,
           "wins": 1,
           "staked": 1,
@@ -283,7 +283,44 @@
       "name": "Speed map leader",
       "added": "2026-11-11",
       "description": "$1 on every thoroughbred the Ladbrokes speed map has leading.",
-      "byCode": {}
+      "byCode": {
+        "thoroughbred": {
+          "bets": 0,
+          "open": 1,
+          "races": 0,
+          "wins": 0,
+          "staked": 0,
+          "returned": 0,
+          "profit": 0,
+          "roi": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
+          "outOfSample": null,
+          "baselines": {
+            "favourite": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "random": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "favouriteOos": null,
+            "randomOos": null
+          },
+          "beatClose": null,
+          "firstDate": null,
+          "verdict": "Insufficient data",
+          "reason": "0 of 300 races"
+        }
+      }
     }
   ],
   "months": [
