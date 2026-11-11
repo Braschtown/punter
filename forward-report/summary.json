@@ -1,0 +1,272 @@
+{
+  "generated": {
+    "utc": "2026-11-11T02:14:30Z",
+    "bne": "2026-11-11T12:14:30+10:00"
+  },
+  "minRaces": 300,
+  "stake": 1,
+  "split": {
+    "thoroughbred": null,
+    "greyhound": null
+  },
+  "tests": [
+    {
+      "id": "favourite",
+      "name": "Favourite",
+      "added": "2026-11-11",
+      "description": "$1 on the favourite at the pick price. Tied favourites share the $1.",
+      "byCode": {
+        "thoroughbred": {
+          "bets": 0,
+          "open": 1,
+          "races": 0,
+          "wins": 0,
+          "staked": 0,
+          "returned": 0,
+          "profit": 0,
+          "roi": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
+          "outOfSample": null,
+          "baselines": {
+            "favourite": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "random": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "favouriteOos": null,
+            "randomOos": null
+          },
+          "beatClose": null,
+          "firstDate": null,
+          "verdict": "Insufficient data",
+          "reason": "0 of 300 races"
+        }
+      }
+    },
+    {
+      "id": "metro-all",
+      "name": "Every runner, metro",
+      "added": "2026-11-11",
+      "description": "$1 on every runner in thoroughbred races at metropolitan tracks. Mostly a control: it measures the bookmaker's margin.",
+      "byCode": {}
+    },
+    {
+      "id": "first-up",
+      "name": "First up",
+      "added": "2026-11-11",
+      "description": "$1 on every thoroughbred having its first run back from a spell.",
+      "byCode": {}
+    },
+    {
+      "id": "second-up",
+      "name": "Second up",
+      "added": "2026-11-11",
+      "description": "$1 on every thoroughbred having its second run back from a spell.",
+      "byCode": {}
+    },
+    {
+      "id": "third-up",
+      "name": "Third up",
+      "added": "2026-11-11",
+      "description": "$1 on every thoroughbred having its third run back from a spell.",
+      "byCode": {
+        "thoroughbred": {
+          "bets": 0,
+          "open": 1,
+          "races": 0,
+          "wins": 0,
+          "staked": 0,
+          "returned": 0,
+          "profit": 0,
+          "roi": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
+          "outOfSample": null,
+          "baselines": {
+            "favourite": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "random": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "favouriteOos": null,
+            "randomOos": null
+          },
+          "beatClose": null,
+          "firstDate": null,
+          "verdict": "Insufficient data",
+          "reason": "0 of 300 races"
+        }
+      }
+    },
+    {
+      "id": "firmer",
+      "name": "Biggest firmer",
+      "added": "2026-11-11",
+      "description": "$1 on the runner whose price shortened most since we first saw it (at least 30 minutes out), if it firmed by 10% or more in implied probability.",
+      "byCode": {
+        "thoroughbred": {
+          "bets": 0,
+          "open": 1,
+          "races": 0,
+          "wins": 0,
+          "staked": 0,
+          "returned": 0,
+          "profit": 0,
+          "roi": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
+          "outOfSample": null,
+          "baselines": {
+            "favourite": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "random": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "favouriteOos": null,
+            "randomOos": null
+          },
+          "beatClose": null,
+          "firstDate": null,
+          "verdict": "Insufficient data",
+          "reason": "0 of 300 races"
+        }
+      }
+    },
+    {
+      "id": "drifter",
+      "name": "Biggest drifter",
+      "added": "2026-11-11",
+      "description": "$1 on the runner whose price lengthened most since we first saw it (at least 30 minutes out), if it drifted by 10% or more in implied probability.",
+      "byCode": {
+        "thoroughbred": {
+          "bets": 0,
+          "open": 1,
+          "races": 0,
+          "wins": 0,
+          "staked": 0,
+          "returned": 0,
+          "profit": 0,
+          "roi": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
+          "outOfSample": null,
+          "baselines": {
+            "favourite": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "random": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "favouriteOos": null,
+            "randomOos": null
+          },
+          "beatClose": null,
+          "firstDate": null,
+          "verdict": "Insufficient data",
+          "reason": "0 of 300 races"
+        }
+      }
+    },
+    {
+      "id": "under-3",
+      "name": "Under $3",
+      "added": "2026-11-11",
+      "description": "$1 on every runner priced under $3.00 at pick time. Tests the favourite-longshot bias directly.",
+      "byCode": {
+        "thoroughbred": {
+          "bets": 0,
+          "open": 1,
+          "races": 0,
+          "wins": 0,
+          "staked": 0,
+          "returned": 0,
+          "profit": 0,
+          "roi": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
+          "outOfSample": null,
+          "baselines": {
+            "favourite": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "random": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "favouriteOos": null,
+            "randomOos": null
+          },
+          "beatClose": null,
+          "firstDate": null,
+          "verdict": "Insufficient data",
+          "reason": "0 of 300 races"
+        }
+      }
+    },
+    {
+      "id": "box-1",
+      "name": "Box 1, Q1 and Q2",
+      "added": "2026-11-11",
+      "description": "$1 on the box 1 greyhound at Q1 Lakeside and Q2 Parklands. Box bias is track specific, so read it per track.",
+      "byCode": {}
+    },
+    {
+      "id": "leader",
+      "name": "Speed map leader",
+      "added": "2026-11-11",
+      "description": "$1 on every thoroughbred the Ladbrokes speed map has leading.",
+      "byCode": {}
+    }
+  ],
+  "months": [
+    "2026-11"
+  ]
+}
