@@ -3,7 +3,7 @@
 # runs of frequent cron schedules (on 8 to 10 Nov 2026 a 5-minute schedule fired 11 times in 2 days).
 #
 # Snapshot: every 5 minutes from 00:00 to 13:59 UTC (10:00 to 23:59 Brisbane), every 30 minutes overnight.
-# Results and analysis: every 15 minutes from 00:00 to 15:59 UTC, hourly overnight.
+# Results, analysis and the forward-test report: every 15 minutes from 00:00 to 15:59 UTC, hourly overnight.
 # Each pass commits and pushes to the data branch. Failures are logged and the loop carries on.
 #
 # Usage: scripts/collect-loop.sh <minutes to run>
@@ -26,6 +26,7 @@ while :; do
   if [ $(( now - last_results )) -ge "$results_every" ]; then
     node scripts/results.mjs || echo "Results pass failed (logged in status.json)."
     node scripts/analysis.mjs || echo "Analysis pass failed (logged in status.json)."
+    node scripts/forward-report.mjs || echo "Forward report failed (logged in status.json)."
     last_results=$now
   fi
 

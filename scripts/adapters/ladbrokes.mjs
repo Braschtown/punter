@@ -97,14 +97,48 @@ function normaliseRunner(x) {
   };
 }
 
-/** Current fixed win prices for one race. */
+const numOrNull = (v) => (v === '' || v === null || v === undefined || !Number.isFinite(Number(v)) ? null : Number(v));
+const textOrNull = (v) => (typeof v === 'string' && v.trim() ? v.trim() : null);
+
+/** Form fields Ladbrokes publishes before the race. Used by the forward tests; never used to settle anything. */
+function runnerForm(x) {
+  return {
+    lastStarts: typeof x.last_twenty_starts === 'string' ? x.last_twenty_starts : null,
+    weight: numOrNull(x.weight?.total),
+    weightAllocated: numOrNull(x.weight?.allocated),
+    claim: textOrNull(x.allowance_weight),
+    jockey: textOrNull(x.jockey),
+    trainer: textOrNull(x.trainer_name),
+    age: numOrNull(x.age),
+    sex: textOrNull(x.sex),
+    gear: textOrNull(x.gear),
+    speedmap: textOrNull(x.speedmap?.label),
+    speedScore: numOrNull(x.speedmap?.settling_lengths), // higher = further forward (Leader 8 to 9, Backmarker 1)
+    indicators: (x.form_indicators || []).map((i) => i.name).filter(Boolean),
+    mover: !!x.mover,
+  };
+}
+
+/** Current fixed win prices for one race, plus the race details and form shown before the jump. */
 export async function fetchPrices(raceId) {
   const d = await get(`/events/${raceId}`);
+  const money = Object.fromEntries(['big_bets', 'biggest_bet', 'money_tracker', 'live_bets']
+    .filter((k) => d[k] !== null && d[k] !== undefined).map((k) => [k, d[k]]));
   return {
     raceId,
     status: d.race.status,
     jumpUtc: epochToIso(d.race.advertised_start),
-    runners: (d.runners || []).map(normaliseRunner),
+    race: {
+      description: textOrNull(d.race.description),
+      group: textOrNull(d.race.group),
+      distance: numOrNull(d.race.distance),
+      trackCondition: textOrNull(d.race.track_condition),
+      rail: textOrNull(d.race.rail_position),
+      weather: textOrNull(d.race.weather),
+    },
+    // Ladbrokes' "big bets" and money tracker. Often empty, so captured raw until we know how often they fill in.
+    money: Object.keys(money).length ? money : null,
+    runners: (d.runners || []).map((x) => ({ ...normaliseRunner(x), form: runnerForm(x) })),
   };
 }
 

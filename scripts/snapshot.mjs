@@ -5,6 +5,7 @@
 import { getAdapter } from './adapters/index.mjs';
 import { SNAPSHOT } from './config.mjs';
 import { hasEarlyForAll, inLateWindow, isSettledStatus, mergePrices } from './lib/capture.mjs';
+import { buildPickRecord, inPickWindow } from './lib/forward.mjs';
 import { readJson, RunLog, writeJson } from './lib/store.mjs';
 import { addDays, bneDate, bneIso, minsBetween, utcIso } from './lib/time.mjs';
 
@@ -80,6 +81,13 @@ early.sort((a, b) => a.race.jumpUtc.localeCompare(b.race.jumpUtc));
 const queue = [...late.map((x) => ({ ...x, kind: 'late' })), ...early.slice(0, SNAPSHOT.earlyCapPerRun).map((x) => ({ ...x, kind: 'early' }))];
 if (early.length > SNAPSHOT.earlyCapPerRun) log.count('earlyDeferred', early.length - SNAPSHOT.earlyCapPerRun);
 
+// Forward-test records, one file per Brisbane race date. Written once per race and never changed.
+const fwdByDate = new Map();
+async function fwdFile(date) {
+  if (!fwdByDate.has(date)) fwdByDate.set(date, await readJson(`forward/${date}.json`, { date, races: {} }));
+  return fwdByDate.get(date);
+}
+
 // 4. Fetch and merge.
 for (const { date, race, kind } of queue) {
   try {
@@ -94,6 +102,17 @@ for (const { date, race, kind } of queue) {
     }
     race.status = prices.status;
     log.count(kind === 'late' ? 'lateCaptures' : 'earlyChecks');
+
+    // Lock the forward-test picks on the first pass inside the pick window.
+    const fwd = await fwdFile(date);
+    if (!fwd.races[race.raceId] && inPickWindow(minsBetween(t, prices.jumpUtc || race.jumpUtc))) {
+      const rec = buildPickRecord(race, prices, file.races[race.raceId], t);
+      if (rec) {
+        fwd.races[race.raceId] = rec;
+        log.count('racesPicked');
+        log.count('picks', rec.picks.length);
+      }
+    }
   } catch (e) {
     const where = `${race.track} R${race.raceNumber}`;
     if (kind === 'late') log.gap(`No late price for ${where}: ${e.message}`, { raceId: race.raceId });
@@ -105,5 +124,6 @@ for (const { date, race, kind } of queue) {
 // 5. Save.
 for (const [date, f] of racesByDate) await writeJson(`races/${date}.json`, f);
 for (const [date, f] of snapsByDate) if (Object.keys(f.races).length) await writeJson(`snapshots/${date}.json`, f);
+for (const [date, f] of fwdByDate) if (Object.keys(f.races).length) await writeJson(`forward/${date}.json`, f);
 log.count('races', allRaces.length);
 await log.save({ sourceStates: { [adapter.name]: sourceState } });

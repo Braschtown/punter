@@ -17,10 +17,10 @@ export async function readJson(rel, fallback) {
   }
 }
 
-/** Returns true when the file changed. */
-export async function writeJson(rel, data) {
+/** Returns true when the file changed. `compact` drops indentation, for large datasets the app downloads. */
+export async function writeJson(rel, data, { compact = false } = {}) {
   const file = path.join(DATA_DIR, rel);
-  const text = JSON.stringify(data, null, 2) + '\n';
+  const text = (compact ? JSON.stringify(data) : JSON.stringify(data, null, 2)) + '\n';
   try {
     if ((await readFile(file, 'utf8')) === text) return false;
   } catch { /* new file */ }
