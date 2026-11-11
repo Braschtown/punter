@@ -2,66 +2,68 @@
   "jobs": {
     "snapshot": {
       "lastRun": {
-        "utc": "2026-11-11T08:35:00Z",
-        "bne": "2026-11-11T18:35:00+10:00"
+        "utc": "2026-11-11T08:40:00Z",
+        "bne": "2026-11-11T18:40:00+10:00"
       },
       "finished": {
-        "utc": "2026-11-11T08:35:04Z",
-        "bne": "2026-11-11T18:35:04+10:00"
+        "utc": "2026-11-11T08:40:04Z",
+        "bne": "2026-11-11T18:40:04+10:00"
       },
       "ok": true,
       "errors": 0,
       "gaps": 0,
       "counts": {
         "lateCaptures": 1,
+        "racesPicked": 1,
+        "picks": 12,
         "earlyChecks": 1,
         "races": 117
       }
     },
     "results": {
       "lastRun": {
-        "utc": "2026-11-11T08:25:10Z",
-        "bne": "2026-11-11T18:25:10+10:00"
+        "utc": "2026-11-11T08:40:04Z",
+        "bne": "2026-11-11T18:40:04+10:00"
       },
       "finished": {
-        "utc": "2026-11-11T08:25:14Z",
-        "bne": "2026-11-11T18:25:14+10:00"
+        "utc": "2026-11-11T08:40:07Z",
+        "bne": "2026-11-11T18:40:07+10:00"
       },
       "ok": true,
       "errors": 0,
-      "gaps": 2,
+      "gaps": 1,
       "counts": {
         "settled": 1,
-        "abandoned": 2,
-        "pending": 1
+        "pending": 1,
+        "abandoned": 1
       }
     },
     "analysis": {
       "lastRun": {
-        "utc": "2026-11-11T08:25:14Z",
-        "bne": "2026-11-11T18:25:14+10:00"
+        "utc": "2026-11-11T08:40:07Z",
+        "bne": "2026-11-11T18:40:07+10:00"
       },
       "finished": {
-        "utc": "2026-11-11T08:25:14Z",
-        "bne": "2026-11-11T18:25:14+10:00"
+        "utc": "2026-11-11T08:40:07Z",
+        "bne": "2026-11-11T18:40:07+10:00"
       },
       "ok": true,
       "errors": 0,
       "gaps": 0,
       "counts": {
         "updated": 1,
-        "thoroughbredRaces": 108,
+        "thoroughbredRaces": 109,
         "greyhoundRaces": 46
       }
     },
     "forward": {
       "lastRun": {
-        "utc": "2026-11-11T08:25:14Z",
-        "bne": "2026-11-11T18:25:14+10:00"
+        "utc": "2026-11-11T08:40:07Z",
+        "bne": "2026-11-11T18:40:07+10:00"
       },
       "finished": {
-        "utc": "2026-11-11T08:25:15Z",
-        "bne": "2026-11-11T18:25:15+10:00"
+        "utc": "2026-11-11T08:40:08Z",
+        "bne": "2026-11-11T18:40:08+10:00"
       },
       "ok": true,
       "errors": 0,
@@ -69,7 +71,7 @@
       "counts": {
         "updated": 1,
         "days": 1,
-        "settledBets": 484
+        "settledBets": 499
       }
     }
   },
@@ -79,12 +81,12 @@
       "state": "OK",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-11T08:35:00Z",
-        "bne": "2026-11-11T18:35:00+10:00"
+        "utc": "2026-11-11T08:40:04Z",
+        "bne": "2026-11-11T18:40:04+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-11T08:35:00Z",
-        "bne": "2026-11-11T18:35:00+10:00"
+        "utc": "2026-11-11T08:40:04Z",
+        "bne": "2026-11-11T18:40:04+10:00"
       }
     },
     "racing-results": {
@@ -93,12 +95,12 @@
       "note": "Results come from the Ladbrokes event feed. Official body pages are linked, not read.",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-11T08:25:10Z",
-        "bne": "2026-11-11T18:25:10+10:00"
+        "utc": "2026-11-11T08:40:04Z",
+        "bne": "2026-11-11T18:40:04+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-11T08:25:10Z",
-        "bne": "2026-11-11T18:25:10+10:00"
+        "utc": "2026-11-11T08:40:04Z",
+        "bne": "2026-11-11T18:40:04+10:00"
       }
     },
     "betfair": {
@@ -108,6 +110,15 @@
     }
   },
   "log": [
+    {
+      "utc": "2026-11-11T08:40:07Z",
+      "bne": "2026-11-11T18:40:07+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Q Straight R14 2026-11-11: no late price for 8 runner(s)",
+      "raceId": "9ca93622-dd48-431f-8cfe-00e5c230d732",
+      "key": "nolate:9ca93622-dd48-431f-8cfe-00e5c230d732"
+    },
     {
       "utc": "2026-11-11T08:25:14Z",
       "bne": "2026-11-11T18:25:14+10:00",
