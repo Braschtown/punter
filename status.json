@@ -2,67 +2,68 @@
   "jobs": {
     "snapshot": {
       "lastRun": {
-        "utc": "2026-11-11T07:25:00Z",
-        "bne": "2026-11-11T17:25:00+10:00"
+        "utc": "2026-11-11T07:30:01Z",
+        "bne": "2026-11-11T17:30:01+10:00"
       },
       "finished": {
-        "utc": "2026-11-11T07:25:06Z",
-        "bne": "2026-11-11T17:25:06+10:00"
+        "utc": "2026-11-11T07:30:06Z",
+        "bne": "2026-11-11T17:30:06+10:00"
       },
       "ok": true,
       "errors": 0,
       "gaps": 0,
       "counts": {
-        "lateCaptures": 3,
+        "lateCaptures": 2,
         "racesPicked": 1,
-        "picks": 11,
+        "picks": 12,
         "earlyChecks": 1,
         "races": 112
       }
     },
     "results": {
       "lastRun": {
-        "utc": "2026-11-11T07:15:04Z",
-        "bne": "2026-11-11T17:15:04+10:00"
+        "utc": "2026-11-11T07:30:06Z",
+        "bne": "2026-11-11T17:30:06+10:00"
       },
       "finished": {
-        "utc": "2026-11-11T07:15:08Z",
-        "bne": "2026-11-11T17:15:08+10:00"
+        "utc": "2026-11-11T07:30:09Z",
+        "bne": "2026-11-11T17:30:09+10:00"
       },
       "ok": true,
       "errors": 0,
-      "gaps": 0,
+      "gaps": 1,
       "counts": {
-        "settled": 3,
-        "pending": 1
+        "settled": 1,
+        "pending": 1,
+        "abandoned": 1
       }
     },
     "analysis": {
       "lastRun": {
-        "utc": "2026-11-11T07:15:08Z",
-        "bne": "2026-11-11T17:15:08+10:00"
+        "utc": "2026-11-11T07:30:09Z",
+        "bne": "2026-11-11T17:30:09+10:00"
       },
       "finished": {
-        "utc": "2026-11-11T07:15:08Z",
-        "bne": "2026-11-11T17:15:08+10:00"
+        "utc": "2026-11-11T07:30:09Z",
+        "bne": "2026-11-11T17:30:09+10:00"
       },
       "ok": true,
       "errors": 0,
       "gaps": 0,
       "counts": {
         "updated": 1,
-        "thoroughbredRaces": 100,
+        "thoroughbredRaces": 101,
         "greyhoundRaces": 46
       }
     },
     "forward": {
       "lastRun": {
-        "utc": "2026-11-11T07:15:08Z",
-        "bne": "2026-11-11T17:15:08+10:00"
+        "utc": "2026-11-11T07:30:09Z",
+        "bne": "2026-11-11T17:30:09+10:00"
       },
       "finished": {
-        "utc": "2026-11-11T07:15:08Z",
-        "bne": "2026-11-11T17:15:08+10:00"
+        "utc": "2026-11-11T07:30:09Z",
+        "bne": "2026-11-11T17:30:09+10:00"
       },
       "ok": true,
       "errors": 0,
@@ -70,7 +71,7 @@
       "counts": {
         "updated": 1,
         "days": 1,
-        "settledBets": 379
+        "settledBets": 386
       }
     }
   },
@@ -80,12 +81,12 @@
       "state": "OK",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-11T07:25:00Z",
-        "bne": "2026-11-11T17:25:00+10:00"
+        "utc": "2026-11-11T07:30:06Z",
+        "bne": "2026-11-11T17:30:06+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-11T07:25:00Z",
-        "bne": "2026-11-11T17:25:00+10:00"
+        "utc": "2026-11-11T07:30:06Z",
+        "bne": "2026-11-11T17:30:06+10:00"
       }
     },
     "racing-results": {
@@ -94,12 +95,12 @@
       "note": "Results come from the Ladbrokes event feed. Official body pages are linked, not read.",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-11T07:15:04Z",
-        "bne": "2026-11-11T17:15:04+10:00"
+        "utc": "2026-11-11T07:30:06Z",
+        "bne": "2026-11-11T17:30:06+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-11T07:15:04Z",
-        "bne": "2026-11-11T17:15:04+10:00"
+        "utc": "2026-11-11T07:30:06Z",
+        "bne": "2026-11-11T17:30:06+10:00"
       }
     },
     "betfair": {
@@ -109,6 +110,15 @@
     }
   },
   "log": [
+    {
+      "utc": "2026-11-11T07:30:09Z",
+      "bne": "2026-11-11T17:30:09+10:00",
+      "job": "results",
+      "level": "gap",
+      "message": "Eagle Farm R5 2026-11-11: no late price for 13 runner(s)",
+      "raceId": "c34b7891-1c72-48dd-a7c8-7e14b2d0d739",
+      "key": "nolate:c34b7891-1c72-48dd-a7c8-7e14b2d0d739"
+    },
     {
       "utc": "2026-11-10T13:06:24Z",
       "bne": "2026-11-10T23:06:24+10:00",
