@@ -106,7 +106,7 @@ The analysis pass (in `collect.yml` after every results pass, or `analysis.yml` 
 
 Fixed rules, defined in [`scripts/lib/forward.mjs`](scripts/lib/forward.mjs), that each log a $1 paper bet about 10 minutes before every jump, on every race they apply to. They ignore the weekly cap: they are a measurement ledger, not a betting plan. Because the pick is locked before the race, nothing can be fitted to the result afterwards.
 
-- **Tests:** favourite; every runner in metro races; first, second and third up; biggest firmer and biggest drifter since we first saw the price; every runner under $3; box 1 at Q1 and Q2; speed map leaders.
+- **Tests:** favourite; every runner in metro races, in country and provincial races, and in all races combined; first, second and third up; biggest firmer and biggest drifter since we first saw the price; every runner under $3; box 1 at Q1 and Q2; speed map leaders.
 - **Stored:** `forward/DATE.json` holds each race's locked record: race details, every runner's price, early price and Ladbrokes form (recent starts, weight, claim, jockey, trainer, speed map, form flags), plus Ladbrokes "big bets" data when it is published. `forward-report/` holds the summary and the monthly datasets the app reads.
 - **Price beaten:** for every bet, whether the price taken was longer than the closing price. A test that keeps beating the close is the earliest sign of an edge.
 - **Verdicts:** judged exactly like the market tests (300 races, out of sample, against the favourite and random baselines). The dashboard (Tests > Forward tests) lets you filter and break any test down by track, condition, distance, class, jockey and more, but filtered views never get a verdict.

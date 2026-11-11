@@ -93,6 +93,16 @@ export const TESTS = [
     pick: (race, rs) => (isThoroughbred(race) && isMetro(race.track) ? each(rs) : []),
   },
   {
+    id: 'nonmetro-all', name: 'Every runner, country and provincial', added: '2026-11-11',
+    description: '$1 on every runner in thoroughbred races away from the metropolitan tracks. Compare its margin with the metro control.',
+    pick: (race, rs) => (isThoroughbred(race) && !isMetro(race.track) ? each(rs) : []),
+  },
+  {
+    id: 'all-runners', name: 'Every runner, all tracks', added: '2026-11-11',
+    description: '$1 on every runner in every race, metro and country combined. Greyhounds are read separately. The overall control for the bookmaker\'s margin.',
+    pick: (race, rs) => each(rs),
+  },
+  {
     id: 'first-up', name: 'First up', added: '2026-11-11',
     description: '$1 on every thoroughbred having its first run back from a spell.',
     pick: (race, rs) => (isThoroughbred(race) ? each(rs.filter((r) => upNumber(r.form?.lastStarts) === 1)) : []),

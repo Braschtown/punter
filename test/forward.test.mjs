@@ -67,6 +67,14 @@ test('firmer and drifter need an early price 30+ minutes out and a 10% move', ()
   assert.deepEqual(pick('drifter', race, rs).map((p) => p.runnerId), ['r3']);
 });
 
+test('every-runner tests split metro from country, and the combined test takes both', () => {
+  const rs = [runner('r1', 3), runner('r2', 8)];
+  const ids = (race) => TESTS.filter((t) => ['metro-all', 'nonmetro-all', 'all-runners'].includes(t.id) && t.pick(race, rs).length === 2).map((t) => t.id);
+  assert.deepEqual(ids({ code: 'thoroughbred', track: 'Flemington' }), ['metro-all', 'all-runners']);
+  assert.deepEqual(ids({ code: 'thoroughbred', track: 'Scone' }), ['nonmetro-all', 'all-runners']);
+  assert.deepEqual(ids({ code: 'greyhound', track: 'Q1 Lakeside' }), ['all-runners']);
+});
+
 test('box 1 only at Q1 and Q2', () => {
   const rs = [runner('r1', 3, { barrier: 1 }), runner('r2', 4, { barrier: 2 })];
   assert.deepEqual(pick('box-1', { code: 'greyhound', track: 'Q1 Lakeside' }, rs).map((p) => p.runnerId), ['r1']);
@@ -92,8 +100,8 @@ test('buildPickRecord locks prices, early prices, form and picks', () => {
   assert.equal(rec.race.metro, true);
   assert.equal(rec.runners[0].early, 3.5);
   const tests = (id) => rec.picks.filter((p) => p.runnerId === id).map((p) => p.test).sort();
-  assert.deepEqual(tests('a'), ['favourite', 'firmer', 'first-up', 'leader', 'metro-all', 'under-3']);
-  assert.deepEqual(tests('b'), ['metro-all']);
+  assert.deepEqual(tests('a'), ['all-runners', 'favourite', 'firmer', 'first-up', 'leader', 'metro-all', 'under-3']);
+  assert.deepEqual(tests('b'), ['all-runners', 'metro-all']);
 });
 
 test('settlePick handles wins, dead heats, scratchings and abandonments', () => {
