@@ -8,3 +8,4 @@
 - **Australian English** in all UI text, comments and docs. No em dashes anywhere.
 - **Small, reviewable commits.** Run `node --test test/*.test.mjs` before committing.
 - **Commit as a linked GitHub identity.** This repo's git email is the `users.noreply.github.com` address. Scheduled workflows never fire if the last commit to the workflow file came from an unlinked email.
+- **Forward tests are fixed once they have data.** Never edit a rule in `scripts/lib/forward.mjs` after it has logged bets. A changed rule is a new test with a new id and `added` date.

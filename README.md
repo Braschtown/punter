@@ -12,6 +12,7 @@ It covers thoroughbreds at all Australian meetings, plus greyhounds at The Q (Q1
   - `collect.yml` runs one long job (about 5 hours 40 minutes) that loops on a timer, then starts its own replacement. GitHub dropped most runs of frequent cron schedules, so the timing lives in [`scripts/collect-loop.sh`](scripts/collect-loop.sh) instead. An hourly cron restarts the chain if it ever breaks.
   - Every 5 minutes during racing hours it takes a price snapshot: each runner's early price (first sighting) and late price (closest to 10 minutes before the jump).
   - Every 15 minutes it records results (winners, placings, final prices and scratchings), settles open paper bets and recomputes the analysis.
+  - About 10 minutes before each jump it locks the forward-test picks (see below), with every runner's price and form at that moment.
   - `snapshot.yml`, `results.yml` and `analysis.yml` run one pass each, by hand only.
 - **Data (the `data` branch)**
   - The jobs commit JSON to a separate branch so `main` stays readable.
@@ -100,6 +101,16 @@ The analysis pass (in `collect.yml` after every results pass, or `analysis.yml` 
    - Each band compares how often runners win (`actualPct`) with how often their price says they should (`impliedPct`).
    - The strategy is "back the band with the best in-sample ROI", judged out of sample.
 3. **Overround:** the average margin per race and per track, at the close and at the late price.
+
+### Forward tests
+
+Fixed rules, defined in [`scripts/lib/forward.mjs`](scripts/lib/forward.mjs), that each log a $1 paper bet about 10 minutes before every jump, on every race they apply to. They ignore the weekly cap: they are a measurement ledger, not a betting plan. Because the pick is locked before the race, nothing can be fitted to the result afterwards.
+
+- **Tests:** favourite; every runner in metro races; first, second and third up; biggest firmer and biggest drifter since we first saw the price; every runner under $3; box 1 at Q1 and Q2; speed map leaders.
+- **Stored:** `forward/DATE.json` holds each race's locked record: race details, every runner's price, early price and Ladbrokes form (recent starts, weight, claim, jockey, trainer, speed map, form flags), plus Ladbrokes "big bets" data when it is published. `forward-report/` holds the summary and the monthly datasets the app reads.
+- **Price beaten:** for every bet, whether the price taken was longer than the closing price. A test that keeps beating the close is the earliest sign of an edge.
+- **Verdicts:** judged exactly like the market tests (300 races, out of sample, against the favourite and random baselines). The dashboard (Tests > Forward tests) lets you filter and break any test down by track, condition, distance, class, jockey and more, but filtered views never get a verdict.
+- **Changing a test:** never edit a test's rule once it has data. Add a new test with a new id and date instead.
 
 ### Baselines
 

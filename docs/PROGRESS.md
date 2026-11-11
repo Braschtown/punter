@@ -2,7 +2,7 @@
 
 Where Punter Lab actually is against [METHOD.md](METHOD.md). Every status below comes from what is in the repo. [`progress.json`](https://github.com/Braschtown/punter/blob/data/progress.json) on the `data` branch mirrors this file for the app. Change both together.
 
-Last checked: 10 Nov 2026, 23:40 UTC (9:40 am Brisbane, 11 Nov).
+Last checked: 11 Nov 2026, 02:15 UTC (12:15 pm Brisbane).
 
 ## Goal
 
@@ -17,7 +17,7 @@ A repeatable, measurable edge on Australian thoroughbred win betting and Q1 Lake
 | 3 | Market diagnostics | in progress |
 | 4 | Market baseline | not started |
 | 5 | Benchmark | blocked |
-| 6 | Feature store | not started |
+| 6 | Feature store | in progress |
 | 7 | Fundamental model | not started |
 | 8 | Combination and calibration | not started |
 | 9 | Staking | not started |
@@ -43,6 +43,7 @@ Price snapshots, results, timestamps in UTC and Australia/Brisbane.
 Overround, favourite-longshot bias and price lag per track.
 
 - **Built:** [`scripts/analysis.mjs`](../scripts/analysis.mjs) computes all three tests per code, with baselines and a 70/30 date split. Overround is also broken down per track.
+- **Forward tests:** from 11 Nov 2026, 10 fixed rules in [`scripts/lib/forward.mjs`](../scripts/lib/forward.mjs) lock a $1 paper pick about 10 minutes before each jump. [`scripts/forward-report.mjs`](../scripts/forward-report.mjs) settles them and judges each one the same way, and the app's Forward tests dashboard breaks them down.
 - **Not yet true:** every test shows "Insufficient data" (33 of 300 thoroughbred races, 12 of 300 greyhound). Favourite-longshot bias and price lag are reported per code, not yet per track.
 - **Gate:** 300 settled races per code, a verdict on each test, and per-track results for all three tests.
 
@@ -61,11 +62,12 @@ Betfair SP capture. Any app key and login go in GitHub Secrets, never in the rep
 - **Possible way through:** a self-hosted runner on an Australian machine, which FEASIBILITY.md lists as an option. Not set up.
 - **Gate:** BSP captured for every race in scope, joined to our races by track, date and runner.
 
-### 6. Feature store: not started
+### 6. Feature store: in progress
 
 Per-runner features per Part 4 of METHOD.md.
 
-- **Current state:** we capture only barrier or box number, distance, track condition and prices. There is no form, ratings, weight or sectional data, and no form source has been identified.
+- **Evidence:** from 11 Nov 2026 the snapshot pass stores, about 10 minutes before every jump, each runner's Ladbrokes form in `forward/DATE.json`: recent starts (so runs from a spell and last-start finish), weight and claim, jockey, trainer, speed map position, form flags, gear, age and sex, plus race class, distance and track condition.
+- **Not yet true:** no speed or sectional ratings, no class or weight change from last start (these will build from our own records as runners recur), and no days since last start.
 - **Gate:** a documented, permitted form source, and per-runner features stored for every settled race.
 
 ### 7. Fundamental model: not started
@@ -98,7 +100,7 @@ Fractional Kelly with the four rules in Part 6 of METHOD.md.
 
 - **No Betfair SP capture,** so there is no benchmark to measure any model against. Betfair blocks GitHub-hosted runners.
 - **Collection not yet proven.** GitHub dropped most cron runs, so collection moved to a self-restarting loop on 11 Nov 2026. It is only proven once it has covered a full racing day.
-- **Racing Queensland form pages.** Racing Queensland appears to render fields and start times via JavaScript, which an Actions runner may not be able to read. Fields and start times currently come from Ladbrokes, so this mainly blocks form data for the feature store.
+- **Racing Queensland form pages.** Racing Queensland appears to render fields and start times via JavaScript, which an Actions runner may not be able to read. Fields, start times and basic form now come from Ladbrokes, so this mainly blocks speed and sectional ratings.
 
 ## Rules
 
