@@ -1,12 +1,12 @@
 {
   "generated": {
-    "utc": "2026-11-11T11:15:05Z",
-    "bne": "2026-11-11T21:15:05+10:00"
+    "utc": "2026-11-12T02:10:33Z",
+    "bne": "2026-11-12T12:10:33+10:00"
   },
   "minRaces": 300,
   "stake": 1,
   "split": {
-    "thoroughbred": null,
+    "thoroughbred": "2026-11-12",
     "greyhound": null
   },
   "tests": [
@@ -18,7 +18,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 46,
-          "open": 0,
+          "open": 1,
           "races": 46,
           "wins": 22,
           "staked": 46,
@@ -33,7 +33,12 @@
             "races": 46,
             "staked": 46
           },
-          "outOfSample": null,
+          "outOfSample": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
           "baselines": {
             "favourite": {
               "roi": 0.077,
@@ -53,8 +58,18 @@
               "races": 46,
               "staked": 46
             },
-            "favouriteOos": null,
-            "randomOos": null
+            "favouriteOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "randomOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            }
           },
           "beatClose": {
             "n": 46,
@@ -124,7 +139,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 143,
-          "open": 0,
+          "open": 11,
           "races": 16,
           "wins": 16,
           "staked": 143,
@@ -139,7 +154,12 @@
             "races": 16,
             "staked": 143
           },
-          "outOfSample": null,
+          "outOfSample": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
           "baselines": {
             "favourite": {
               "roi": -0.0281,
@@ -159,8 +179,18 @@
               "races": 16,
               "staked": 16
             },
-            "favouriteOos": null,
-            "randomOos": null
+            "favouriteOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "randomOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            }
           },
           "beatClose": {
             "n": 143,
@@ -196,7 +226,12 @@
             "races": 4,
             "staked": 34
           },
-          "outOfSample": null,
+          "outOfSample": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
           "baselines": {
             "favourite": {
               "roi": 0.6125,
@@ -216,8 +251,18 @@
               "races": 4,
               "staked": 4
             },
-            "favouriteOos": null,
-            "randomOos": null
+            "favouriteOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "randomOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            }
           },
           "beatClose": {
             "n": 34,
@@ -238,7 +283,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 55,
-          "open": 0,
+          "open": 11,
           "races": 6,
           "wins": 6,
           "staked": 55,
@@ -253,7 +298,12 @@
             "races": 6,
             "staked": 55
           },
-          "outOfSample": null,
+          "outOfSample": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
           "baselines": {
             "favourite": {
               "roi": 0.4583,
@@ -273,8 +323,18 @@
               "races": 6,
               "staked": 6
             },
-            "favouriteOos": null,
-            "randomOos": null
+            "favouriteOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "randomOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            }
           },
           "beatClose": {
             "n": 55,
@@ -310,7 +370,12 @@
             "races": 33,
             "staked": 84
           },
-          "outOfSample": null,
+          "outOfSample": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
           "baselines": {
             "favourite": {
               "roi": 0.0439,
@@ -330,8 +395,18 @@
               "races": 33,
               "staked": 33
             },
-            "favouriteOos": null,
-            "randomOos": null
+            "favouriteOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "randomOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            }
           },
           "beatClose": {
             "n": 84,
@@ -352,7 +427,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 70,
-          "open": 0,
+          "open": 2,
           "races": 38,
           "wins": 9,
           "staked": 70,
@@ -367,7 +442,12 @@
             "races": 38,
             "staked": 70
           },
-          "outOfSample": null,
+          "outOfSample": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
           "baselines": {
             "favourite": {
               "roi": 0.1921,
@@ -387,8 +467,18 @@
               "races": 38,
               "staked": 38
             },
-            "favouriteOos": null,
-            "randomOos": null
+            "favouriteOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "randomOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            }
           },
           "beatClose": {
             "n": 70,
@@ -409,7 +499,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 54,
-          "open": 0,
+          "open": 2,
           "races": 35,
           "wins": 8,
           "staked": 54,
@@ -424,7 +514,12 @@
             "races": 35,
             "staked": 54
           },
-          "outOfSample": null,
+          "outOfSample": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
           "baselines": {
             "favourite": {
               "roi": 0.0783,
@@ -444,8 +539,18 @@
               "races": 35,
               "staked": 35
             },
-            "favouriteOos": null,
-            "randomOos": null
+            "favouriteOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "randomOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            }
           },
           "beatClose": {
             "n": 54,
@@ -466,7 +571,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 44,
-          "open": 0,
+          "open": 1,
           "races": 44,
           "wins": 5,
           "staked": 44,
@@ -481,7 +586,12 @@
             "races": 44,
             "staked": 44
           },
-          "outOfSample": null,
+          "outOfSample": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
           "baselines": {
             "favourite": {
               "roi": 0.002,
@@ -501,8 +611,18 @@
               "races": 44,
               "staked": 44
             },
-            "favouriteOos": null,
-            "randomOos": null
+            "favouriteOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "randomOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            }
           },
           "beatClose": {
             "n": 44,
@@ -572,7 +692,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 44,
-          "open": 0,
+          "open": 1,
           "races": 44,
           "wins": 2,
           "staked": 44,
@@ -587,7 +707,12 @@
             "races": 44,
             "staked": 44
           },
-          "outOfSample": null,
+          "outOfSample": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
           "baselines": {
             "favourite": {
               "roi": 0.0464,
@@ -607,8 +732,18 @@
               "races": 44,
               "staked": 44
             },
-            "favouriteOos": null,
-            "randomOos": null
+            "favouriteOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "randomOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            }
           },
           "beatClose": {
             "n": 44,
@@ -693,7 +828,12 @@
             "races": 33,
             "staked": 36
           },
-          "outOfSample": null,
+          "outOfSample": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
           "baselines": {
             "favourite": {
               "roi": 0.1982,
@@ -713,8 +853,18 @@
               "races": 33,
               "staked": 33
             },
-            "favouriteOos": null,
-            "randomOos": null
+            "favouriteOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "randomOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            }
           },
           "beatClose": {
             "n": 36,
@@ -791,7 +941,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 37,
-          "open": 0,
+          "open": 1,
           "races": 25,
           "wins": 2,
           "staked": 37,
@@ -806,7 +956,12 @@
             "races": 25,
             "staked": 37
           },
-          "outOfSample": null,
+          "outOfSample": {
+            "roi": null,
+            "ci": null,
+            "races": 0,
+            "staked": 0
+          },
           "baselines": {
             "favourite": {
               "roi": 0.232,
@@ -826,8 +981,18 @@
               "races": 25,
               "staked": 25
             },
-            "favouriteOos": null,
-            "randomOos": null
+            "favouriteOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            },
+            "randomOos": {
+              "roi": null,
+              "ci": null,
+              "races": 0,
+              "staked": 0
+            }
           },
           "beatClose": {
             "n": 37,
