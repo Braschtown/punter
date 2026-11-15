@@ -169,3 +169,7 @@ Choosing and judging on the same data finds "edges" that are only noise.
 ---
 
 Paper trading and research only. Not financial advice. Gambling Help Online: 1800 858 858.
+
+## My bets (real money)
+
+Real bets placed by hand on Ladbrokes live in `my-bets.json` on the `data` branch, and show under Ledger > My bets. They are kept apart from the paper ledger, so they never count towards a test or the weekly cap. Add a new bet by appending an entry with the same fields. Refunds are left out of the counts, and a bonus bet has no cash stake, so its profit is its return.

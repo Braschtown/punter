@@ -10,6 +10,7 @@ import * as notes from './screens/notes.js';
 import * as status from './screens/status.js';
 import * as method from './screens/method.js';
 import * as forward from './screens/forward.js';
+import * as mybets from './screens/mybets.js';
 
 const ROUTES = {
   today: { title: 'Today', label: 'Today', icon: 'today', screen: today },
@@ -19,6 +20,8 @@ const ROUTES = {
   status: { title: 'Status', label: 'Status', icon: 'status', screen: status },
   method: { title: 'Method', label: 'Method', icon: 'method', screen: method },
   // Reached from the Tests screen, not the bottom bar.
+  // Reached from the Ledger screen, not the bottom bar.
+  mybets: { title: 'My bets', label: 'My bets', icon: 'ledger', screen: mybets, nav: 'ledger', hidden: true },
   forward: { title: 'Forward tests', label: 'Forward', icon: 'tests', screen: forward, nav: 'tests', hidden: true, wide: true },
 };
 

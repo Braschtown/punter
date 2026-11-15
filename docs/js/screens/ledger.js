@@ -3,6 +3,7 @@
 import { downloadJson, getPicks, removePick } from '../lib/local.js';
 import { loadLedger, settledPnl } from '../lib/ledger.js';
 import { icon } from '../lib/icons.js';
+import { ledgerTabs } from './mybets.js';
 import { esc, fmtDate, fmtMoney, fmtPct, fmtPrice, fmtSigned } from '../lib/format.js';
 
 const BADGE = {
@@ -30,7 +31,7 @@ function betRow(b) {
 }
 
 export async function render(root, ui) {
-  root.innerHTML = `${ui.skeleton(1, 'tall')}<div class="tiles">${ui.skeleton(3, 'short')}</div>${ui.skeleton(3, 'short')}`;
+  root.innerHTML = `${ledgerTabs('ledger')}${ui.skeleton(1, 'tall')}<div class="tiles">${ui.skeleton(3, 'short')}</div>${ui.skeleton(3, 'short')}`;
   const l = await loadLedger();
   if (!ui.isCurrent()) return;
 
@@ -41,6 +42,7 @@ export async function render(root, ui) {
   const staked = settled.reduce((s, b) => s + b.stake, 0);
 
   root.innerHTML = `
+    ${ledgerTabs('ledger')}
     <section class="card" aria-labelledby="pnl-h">
       <p class="t-label" id="pnl-h">Settled paper P&amp;L</p>
       <p class="t-hero" style="margin:0;color:${pnl > 0 ? 'var(--primary)' : 'var(--on-surface)'}">${esc(settled.length ? fmtSigned(pnl) : fmtMoney(0))}</p>
