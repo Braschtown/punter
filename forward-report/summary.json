@@ -1,7 +1,7 @@
 {
   "generated": {
-    "utc": "2026-11-20T05:45:10Z",
-    "bne": "2026-11-20T15:45:10+10:00"
+    "utc": "2026-11-20T06:00:10Z",
+    "bne": "2026-11-20T16:00:10+10:00"
   },
   "minRaces": 300,
   "stake": 1,
@@ -17,72 +17,72 @@
       "description": "$1 on the favourite at the pick price. Tied favourites share the $1.",
       "byCode": {
         "thoroughbred": {
-          "bets": 459,
-          "open": 3,
-          "races": 449,
+          "bets": 460,
+          "open": 4,
+          "races": 450,
           "wins": 166,
-          "staked": 449,
+          "staked": 450,
           "returned": 393.18,
-          "profit": -55.82,
+          "profit": -56.82,
           "roi": {
-            "roi": -0.1243,
+            "roi": -0.1263,
             "ci": [
-              -0.2255,
-              -0.0123
+              -0.2444,
+              -0.0141
             ],
-            "races": 449,
-            "staked": 449
+            "races": 450,
+            "staked": 450
           },
           "outOfSample": {
-            "roi": 0.0414,
+            "roi": 0.0316,
             "ci": [
-              -0.1829,
-              0.3091
+              -0.1963,
+              0.2599
             ],
-            "races": 105,
-            "staked": 105
+            "races": 106,
+            "staked": 106
           },
           "baselines": {
             "favourite": {
-              "roi": -0.1243,
+              "roi": -0.1263,
               "ci": [
-                -0.2255,
-                -0.0123
+                -0.2444,
+                -0.0141
               ],
-              "races": 449,
-              "staked": 449
+              "races": 450,
+              "staked": 450
             },
             "random": {
-              "roi": -0.3553,
+              "roi": -0.3559,
               "ci": [
-                -0.4059,
-                -0.2975
+                -0.4085,
+                -0.2984
               ],
-              "races": 449,
-              "staked": 449
+              "races": 450,
+              "staked": 450
             },
             "favouriteOos": {
-              "roi": 0.0414,
+              "roi": 0.0316,
               "ci": [
-                -0.1829,
-                0.3091
+                -0.1963,
+                0.2599
               ],
-              "races": 105,
-              "staked": 105
+              "races": 106,
+              "staked": 106
             },
             "randomOos": {
-              "roi": -0.3356,
+              "roi": -0.3384,
               "ci": [
-                -0.458,
-                -0.1902
+                -0.4498,
+                -0.2033
               ],
-              "races": 105,
-              "staked": 105
+              "races": 106,
+              "staked": 106
             }
           },
           "beatClose": {
-            "n": 459,
-            "pct": 0.4553,
+            "n": 460,
+            "pct": 0.4543,
             "meanEdge": 0.0015
           },
           "firstDate": "2026-11-11",
@@ -90,77 +90,77 @@
           "reason": "Does not beat the baselines out of sample"
         },
         "greyhound": {
-          "bets": 121,
+          "bets": 122,
           "open": 1,
-          "races": 116,
-          "wins": 47,
-          "staked": 116,
-          "returned": 87.925,
-          "profit": -28.075,
+          "races": 117,
+          "wins": 48,
+          "staked": 117,
+          "returned": 90.075,
+          "profit": -26.925,
           "roi": {
-            "roi": -0.242,
+            "roi": -0.2301,
             "ci": [
-              -0.4137,
-              -0.0674
+              -0.4006,
+              -0.0687
             ],
-            "races": 116,
-            "staked": 116
+            "races": 117,
+            "staked": 117
           },
           "outOfSample": {
-            "roi": -0.2367,
+            "roi": -0.202,
             "ci": [
-              -0.517,
-              0.0569
+              -0.4753,
+              0.1225
             ],
-            "races": 39,
-            "staked": 39
+            "races": 40,
+            "staked": 40
           },
           "baselines": {
             "favourite": {
-              "roi": -0.242,
+              "roi": -0.2301,
               "ci": [
-                -0.4137,
-                -0.0674
+                -0.4006,
+                -0.0687
               ],
-              "races": 116,
-              "staked": 116
+              "races": 117,
+              "staked": 117
             },
             "random": {
-              "roi": -0.3479,
+              "roi": -0.3509,
               "ci": [
-                -0.4729,
-                -0.1805
+                -0.4787,
+                -0.178
               ],
-              "races": 116,
-              "staked": 116
+              "races": 117,
+              "staked": 117
             },
             "favouriteOos": {
-              "roi": -0.2367,
+              "roi": -0.202,
               "ci": [
-                -0.517,
-                0.0569
+                -0.4753,
+                0.1225
               ],
-              "races": 39,
-              "staked": 39
+              "races": 40,
+              "staked": 40
             },
             "randomOos": {
-              "roi": -0.1974,
+              "roi": -0.2097,
               "ci": [
-                -0.5122,
-                0.2725
+                -0.5063,
+                0.2519
               ],
-              "races": 39,
-              "staked": 39
+              "races": 40,
+              "staked": 40
             }
           },
           "beatClose": {
-            "n": 121,
-            "pct": 0.438,
-            "meanEdge": -0.0318
+            "n": 122,
+            "pct": 0.4426,
+            "meanEdge": -0.0309
           },
           "firstDate": "2026-11-11",
           "verdict": "Insufficient data",
-          "reason": "116 of 300 races"
+          "reason": "117 of 300 races"
         }
       }
     },
@@ -252,73 +252,73 @@
       "description": "$1 on every runner in thoroughbred races away from the metropolitan tracks. Compare its margin with the metro control.",
       "byCode": {
         "thoroughbred": {
-          "bets": 3188,
-          "open": 30,
-          "races": 332,
-          "wins": 333,
-          "staked": 3188,
-          "returned": 2129.59,
-          "profit": -1058.41,
+          "bets": 3197,
+          "open": 37,
+          "races": 333,
+          "wins": 334,
+          "staked": 3197,
+          "returned": 2132.89,
+          "profit": -1064.11,
           "roi": {
-            "roi": -0.332,
+            "roi": -0.3328,
             "ci": [
-              -0.403,
-              -0.2454
+              -0.4017,
+              -0.2451
             ],
-            "races": 332,
-            "staked": 3188
+            "races": 333,
+            "staked": 3197
           },
           "outOfSample": {
-            "roi": -0.2984,
+            "roi": -0.3025,
             "ci": [
-              -0.4544,
-              -0.0996
+              -0.4577,
+              -0.1082
             ],
-            "races": 78,
-            "staked": 736
+            "races": 79,
+            "staked": 745
           },
           "baselines": {
             "favourite": {
-              "roi": -0.1458,
+              "roi": -0.1484,
               "ci": [
-                -0.2807,
-                -0.0139
+                -0.2799,
+                -0.0091
               ],
-              "races": 332,
-              "staked": 332
+              "races": 333,
+              "staked": 333
             },
             "random": {
-              "roi": -0.3391,
+              "roi": -0.34,
               "ci": [
-                -0.401,
-                -0.2641
+                -0.4027,
+                -0.2639
               ],
-              "races": 332,
-              "staked": 332
+              "races": 333,
+              "staked": 333
             },
             "favouriteOos": {
-              "roi": -0.041,
+              "roi": -0.0532,
               "ci": [
-                -0.3289,
-                0.252
+                -0.3057,
+                0.2014
               ],
-              "races": 78,
-              "staked": 78
+              "races": 79,
+              "staked": 79
             },
             "randomOos": {
-              "roi": -0.303,
+              "roi": -0.3071,
               "ci": [
-                -0.4487,
-                -0.1249
+                -0.4507,
+                -0.1435
               ],
-              "races": 78,
-              "staked": 78
+              "races": 79,
+              "staked": 79
             }
           },
           "beatClose": {
-            "n": 3188,
-            "pct": 0.2867,
-            "meanEdge": -0.0787
+            "n": 3197,
+            "pct": 0.2865,
+            "meanEdge": -0.0788
           },
           "firstDate": "2026-11-11",
           "verdict": "No edge",
@@ -333,150 +333,150 @@
       "description": "$1 on every runner in every race, metro and country combined. Greyhounds are read separately. The overall control for the bookmaker's margin.",
       "byCode": {
         "thoroughbred": {
-          "bets": 3948,
-          "open": 30,
-          "races": 411,
-          "wins": 412,
-          "staked": 3948,
-          "returned": 2609.89,
-          "profit": -1338.11,
+          "bets": 3957,
+          "open": 37,
+          "races": 412,
+          "wins": 413,
+          "staked": 3957,
+          "returned": 2613.19,
+          "profit": -1343.81,
           "roi": {
-            "roi": -0.3389,
+            "roi": -0.3396,
             "ci": [
-              -0.4022,
-              -0.2688
+              -0.4005,
+              -0.2752
             ],
-            "races": 411,
-            "staked": 3948
+            "races": 412,
+            "staked": 3957
           },
           "outOfSample": {
-            "roi": -0.3244,
+            "roi": -0.3271,
             "ci": [
-              -0.4603,
-              -0.1649
+              -0.4507,
+              -0.1806
             ],
-            "races": 106,
-            "staked": 1010
+            "races": 107,
+            "staked": 1019
           },
           "baselines": {
             "favourite": {
-              "roi": -0.1368,
+              "roi": -0.1389,
               "ci": [
-                -0.2507,
-                -0.0152
+                -0.2543,
+                -0.0182
               ],
-              "races": 411,
-              "staked": 411
+              "races": 412,
+              "staked": 412
             },
             "random": {
-              "roi": -0.3475,
+              "roi": -0.3482,
               "ci": [
-                -0.4045,
-                -0.2875
+                -0.4031,
+                -0.2923
               ],
-              "races": 411,
-              "staked": 411
+              "races": 412,
+              "staked": 412
             },
             "favouriteOos": {
-              "roi": 0.0542,
+              "roi": 0.0444,
               "ci": [
-                -0.1892,
-                0.2992
+                -0.2061,
+                0.288
               ],
-              "races": 106,
-              "staked": 106
+              "races": 107,
+              "staked": 107
             },
             "randomOos": {
-              "roi": -0.3328,
+              "roi": -0.3356,
               "ci": [
-                -0.4525,
-                -0.1946
+                -0.4488,
+                -0.2013
               ],
-              "races": 106,
-              "staked": 106
+              "races": 107,
+              "staked": 107
             }
           },
           "beatClose": {
-            "n": 3948,
-            "pct": 0.2839,
-            "meanEdge": -0.0754
+            "n": 3957,
+            "pct": 0.2838,
+            "meanEdge": -0.0755
           },
           "firstDate": "2026-11-11",
           "verdict": "No edge",
           "reason": "Out-of-sample ROI below zero"
         },
         "greyhound": {
-          "bets": 803,
+          "bets": 810,
           "open": 7,
-          "races": 108,
-          "wins": 108,
-          "staked": 803,
-          "returned": 539.7,
-          "profit": -263.3,
+          "races": 109,
+          "wins": 109,
+          "staked": 810,
+          "returned": 541.85,
+          "profit": -268.15,
           "roi": {
-            "roi": -0.3279,
+            "roi": -0.331,
             "ci": [
-              -0.4737,
-              -0.1212
+              -0.4831,
+              -0.1528
             ],
-            "races": 108,
-            "staked": 803
+            "races": 109,
+            "staked": 810
           },
           "outOfSample": {
-            "roi": -0.1856,
+            "roi": -0.1976,
             "ci": [
-              -0.5231,
-              0.3186
+              -0.5125,
+              0.2933
             ],
-            "races": 39,
-            "staked": 289
+            "races": 40,
+            "staked": 296
           },
           "baselines": {
             "favourite": {
-              "roi": -0.216,
+              "roi": -0.2034,
               "ci": [
-                -0.3988,
-                -0.032
+                -0.389,
+                -0.0147
               ],
-              "races": 108,
-              "staked": 108
+              "races": 109,
+              "staked": 109
             },
             "random": {
-              "roi": -0.3267,
+              "roi": -0.33,
               "ci": [
-                -0.4673,
-                -0.1313
+                -0.4775,
+                -0.1614
               ],
-              "races": 108,
-              "staked": 108
+              "races": 109,
+              "staked": 109
             },
             "favouriteOos": {
-              "roi": -0.2367,
+              "roi": -0.202,
               "ci": [
-                -0.517,
-                0.0569
+                -0.4753,
+                0.1225
               ],
-              "races": 39,
-              "staked": 39
+              "races": 40,
+              "staked": 40
             },
             "randomOos": {
-              "roi": -0.1974,
+              "roi": -0.2097,
               "ci": [
-                -0.5122,
-                0.2725
+                -0.5063,
+                0.2519
               ],
-              "races": 39,
-              "staked": 39
+              "races": 40,
+              "staked": 40
             }
           },
           "beatClose": {
-            "n": 803,
-            "pct": 0.396,
-            "meanEdge": -0.0193
+            "n": 810,
+            "pct": 0.3963,
+            "meanEdge": -0.02
           },
           "firstDate": "2026-11-12",
           "verdict": "Insufficient data",
-          "reason": "108 of 300 races"
+          "reason": "109 of 300 races"
         }
       }
     },
@@ -487,77 +487,77 @@
       "description": "$1 on every thoroughbred having its first run back from a spell.",
       "byCode": {
         "thoroughbred": {
-          "bets": 686,
-          "open": 1,
-          "races": 290,
+          "bets": 687,
+          "open": 0,
+          "races": 291,
           "wins": 57,
-          "staked": 686,
+          "staked": 687,
           "returned": 295.41,
-          "profit": -390.59,
+          "profit": -391.59,
           "roi": {
-            "roi": -0.5694,
+            "roi": -0.57,
             "ci": [
-              -0.6972,
-              -0.4476
+              -0.6823,
+              -0.4453
             ],
-            "races": 290,
-            "staked": 686
+            "races": 291,
+            "staked": 687
           },
           "outOfSample": {
-            "roi": -0.5534,
+            "roi": -0.556,
             "ci": [
-              -0.7921,
-              -0.2801
+              -0.7874,
+              -0.2586
             ],
-            "races": 75,
-            "staked": 174
+            "races": 76,
+            "staked": 175
           },
           "baselines": {
             "favourite": {
-              "roi": -0.0945,
+              "roi": -0.0976,
               "ci": [
-                -0.2299,
-                0.0514
+                -0.2342,
+                0.0453
               ],
-              "races": 290,
-              "staked": 290
+              "races": 291,
+              "staked": 291
             },
             "random": {
-              "roi": -0.3474,
+              "roi": -0.3483,
               "ci": [
-                -0.4137,
-                -0.2723
+                -0.4171,
+                -0.2707
               ],
-              "races": 290,
-              "staked": 290
+              "races": 291,
+              "staked": 291
             },
             "favouriteOos": {
-              "roi": 0.03,
+              "roi": 0.0164,
               "ci": [
-                -0.264,
-                0.292
+                -0.2487,
+                0.2618
               ],
-              "races": 75,
-              "staked": 75
+              "races": 76,
+              "staked": 76
             },
             "randomOos": {
-              "roi": -0.264,
+              "roi": -0.2689,
               "ci": [
-                -0.4321,
-                -0.077
+                -0.4232,
+                -0.0784
               ],
-              "races": 75,
-              "staked": 75
+              "races": 76,
+              "staked": 76
             }
           },
           "beatClose": {
-            "n": 686,
-            "pct": 0.3105,
-            "meanEdge": -0.0791
+            "n": 687,
+            "pct": 0.31,
+            "meanEdge": -0.0795
           },
           "firstDate": "2026-11-11",
           "verdict": "Insufficient data",
-          "reason": "290 of 300 races"
+          "reason": "291 of 300 races"
         }
       }
     },
@@ -568,73 +568,73 @@
       "description": "$1 on every thoroughbred having its second run back from a spell.",
       "byCode": {
         "thoroughbred": {
-          "bets": 662,
+          "bets": 665,
           "open": 7,
-          "races": 320,
+          "races": 321,
           "wins": 69,
-          "staked": 662,
+          "staked": 665,
           "returned": 492.2,
-          "profit": -169.8,
+          "profit": -172.8,
           "roi": {
-            "roi": -0.2565,
+            "roi": -0.2598,
             "ci": [
-              -0.5144,
-              0.0476
+              -0.4965,
+              0.0385
             ],
-            "races": 320,
-            "staked": 662
+            "races": 321,
+            "staked": 665
           },
           "outOfSample": {
-            "roi": 0.4369,
+            "roi": 0.41,
             "ci": [
-              -0.344,
-              1.4773
+              -0.3314,
+              1.4648
             ],
-            "races": 75,
-            "staked": 157
+            "races": 76,
+            "staked": 160
           },
           "baselines": {
             "favourite": {
-              "roi": -0.1116,
+              "roi": -0.1144,
               "ci": [
-                -0.25,
-                0.0352
+                -0.2491,
+                0.021
               ],
-              "races": 320,
-              "staked": 320
+              "races": 321,
+              "staked": 321
             },
             "random": {
-              "roi": -0.3361,
+              "roi": -0.3371,
               "ci": [
-                -0.4039,
-                -0.2581
+                -0.4017,
+                -0.2638
               ],
-              "races": 320,
-              "staked": 320
+              "races": 321,
+              "staked": 321
             },
             "favouriteOos": {
-              "roi": 0.012,
+              "roi": -0.0013,
               "ci": [
-                -0.2593,
-                0.3248
+                -0.2883,
+                0.2987
               ],
-              "races": 75,
-              "staked": 75
+              "races": 76,
+              "staked": 76
             },
             "randomOos": {
-              "roi": -0.2713,
+              "roi": -0.2761,
               "ci": [
-                -0.4256,
-                -0.0964
+                -0.4405,
+                -0.0928
               ],
-              "races": 75,
-              "staked": 75
+              "races": 76,
+              "staked": 76
             }
           },
           "beatClose": {
-            "n": 662,
-            "pct": 0.2644,
-            "meanEdge": -0.0716
+            "n": 665,
+            "pct": 0.2632,
+            "meanEdge": -0.0725
           },
           "firstDate": "2026-11-11",
           "verdict": "Inconclusive",
@@ -649,73 +649,73 @@
       "description": "$1 on every thoroughbred having its third run back from a spell.",
       "byCode": {
         "thoroughbred": {
-          "bets": 552,
+          "bets": 553,
           "open": 5,
-          "races": 317,
-          "wins": 69,
-          "staked": 552,
-          "returned": 398.49,
-          "profit": -153.51,
+          "races": 318,
+          "wins": 70,
+          "staked": 553,
+          "returned": 401.79,
+          "profit": -151.21,
           "roi": {
-            "roi": -0.2781,
+            "roi": -0.2734,
             "ci": [
-              -0.5067,
-              -0.0354
+              -0.516,
+              -0.0148
             ],
-            "races": 317,
-            "staked": 552
+            "races": 318,
+            "staked": 553
           },
           "outOfSample": {
-            "roi": -0.6053,
+            "roi": -0.5819,
             "ci": [
-              -0.8888,
-              -0.1492
+              -0.8713,
+              -0.1304
             ],
-            "races": 70,
-            "staked": 123
+            "races": 71,
+            "staked": 124
           },
           "baselines": {
             "favourite": {
-              "roi": -0.1289,
+              "roi": -0.1316,
               "ci": [
-                -0.2679,
-                -0.0004
+                -0.2662,
+                0.0197
               ],
-              "races": 317,
-              "staked": 317
+              "races": 318,
+              "staked": 318
             },
             "random": {
-              "roi": -0.3572,
+              "roi": -0.3581,
               "ci": [
-                -0.423,
-                -0.2881
+                -0.4223,
+                -0.282
               ],
-              "races": 317,
-              "staked": 317
+              "races": 318,
+              "staked": 318
             },
             "favouriteOos": {
-              "roi": 0.0907,
+              "roi": 0.0754,
               "ci": [
-                -0.2179,
-                0.4001
+                -0.231,
+                0.3902
               ],
-              "races": 70,
-              "staked": 70
+              "races": 71,
+              "staked": 71
             },
             "randomOos": {
-              "roi": -0.3542,
+              "roi": -0.3581,
               "ci": [
-                -0.4951,
-                -0.158
+                -0.5072,
+                -0.1644
               ],
-              "races": 70,
-              "staked": 70
+              "races": 71,
+              "staked": 71
             }
           },
           "beatClose": {
-            "n": 552,
-            "pct": 0.308,
-            "meanEdge": -0.0653
+            "n": 553,
+            "pct": 0.3092,
+            "meanEdge": -0.0649
           },
           "firstDate": "2026-11-11",
           "verdict": "No edge",
@@ -730,150 +730,150 @@
       "description": "$1 on the runner whose price shortened most since we first saw it (at least 30 minutes out), if it firmed by 10% or more in implied probability.",
       "byCode": {
         "thoroughbred": {
-          "bets": 437,
-          "open": 3,
-          "races": 437,
+          "bets": 438,
+          "open": 4,
+          "races": 438,
           "wins": 44,
-          "staked": 437,
+          "staked": 438,
           "returned": 195.54,
-          "profit": -241.46,
+          "profit": -242.46,
           "roi": {
-            "roi": -0.5525,
+            "roi": -0.5536,
             "ci": [
-              -0.7065,
-              -0.3598
+              -0.7018,
+              -0.3761
             ],
-            "races": 437,
-            "staked": 437
+            "races": 438,
+            "staked": 438
           },
           "outOfSample": {
-            "roi": -0.5045,
+            "roi": -0.5093,
             "ci": [
-              -0.8644,
-              -0.039
+              -0.8535,
+              -0.0465
             ],
-            "races": 101,
-            "staked": 101
+            "races": 102,
+            "staked": 102
           },
           "baselines": {
             "favourite": {
-              "roi": -0.1212,
+              "roi": -0.1232,
               "ci": [
-                -0.2215,
-                -0.0022
+                -0.2447,
+                -0.0112
               ],
-              "races": 437,
-              "staked": 437
+              "races": 438,
+              "staked": 438
             },
             "random": {
-              "roi": -0.3608,
+              "roi": -0.3614,
               "ci": [
-                -0.4138,
-                -0.3046
+                -0.4143,
+                -0.303
               ],
-              "races": 437,
-              "staked": 437
+              "races": 438,
+              "staked": 438
             },
             "favouriteOos": {
-              "roi": 0.0851,
+              "roi": 0.0745,
               "ci": [
-                -0.1629,
-                0.3377
+                -0.1721,
+                0.3216
               ],
-              "races": 101,
-              "staked": 101
+              "races": 102,
+              "staked": 102
             },
             "randomOos": {
-              "roi": -0.3503,
+              "roi": -0.3531,
               "ci": [
-                -0.4667,
-                -0.2116
+                -0.4787,
+                -0.1954
               ],
-              "races": 101,
-              "staked": 101
+              "races": 102,
+              "staked": 102
             }
           },
           "beatClose": {
-            "n": 437,
-            "pct": 0.254,
-            "meanEdge": -0.1028
+            "n": 438,
+            "pct": 0.2534,
+            "meanEdge": -0.1031
           },
           "firstDate": "2026-11-11",
           "verdict": "No edge",
           "reason": "Out-of-sample ROI below zero"
         },
         "greyhound": {
-          "bets": 96,
+          "bets": 97,
           "open": 1,
-          "races": 96,
+          "races": 97,
           "wins": 10,
-          "staked": 96,
+          "staked": 97,
           "returned": 46.88,
-          "profit": -49.12,
+          "profit": -50.12,
           "roi": {
-            "roi": -0.5117,
+            "roi": -0.5167,
             "ci": [
-              -0.8616,
-              -0.0927
+              -0.8382,
+              -0.0833
             ],
-            "races": 96,
-            "staked": 96
+            "races": 97,
+            "staked": 97
           },
           "outOfSample": {
-            "roi": -0.8226,
+            "roi": -0.8281,
             "ci": [
               -1,
-              -0.4677
+              -0.4844
             ],
-            "races": 31,
-            "staked": 31
+            "races": 32,
+            "staked": 32
           },
           "baselines": {
             "favourite": {
-              "roi": -0.2203,
+              "roi": -0.2062,
               "ci": [
-                -0.4221,
-                -0.0193
+                -0.4052,
+                0.0173
               ],
-              "races": 96,
-              "staked": 96
+              "races": 97,
+              "staked": 97
             },
             "random": {
-              "roi": -0.3576,
+              "roi": -0.3611,
               "ci": [
-                -0.4997,
-                -0.1557
+                -0.5031,
+                -0.1625
               ],
-              "races": 96,
-              "staked": 96
+              "races": 97,
+              "staked": 97
             },
             "favouriteOos": {
-              "roi": -0.1348,
+              "roi": -0.0947,
               "ci": [
-                -0.4381,
-                0.2065
+                -0.4433,
+                0.2304
               ],
-              "races": 31,
-              "staked": 31
+              "races": 32,
+              "staked": 32
             },
             "randomOos": {
-              "roi": -0.2105,
+              "roi": -0.2256,
               "ci": [
-                -0.5733,
-                0.3147
+                -0.5977,
+                0.3842
               ],
-              "races": 31,
-              "staked": 31
+              "races": 32,
+              "staked": 32
             }
           },
           "beatClose": {
-            "n": 96,
-            "pct": 0.3542,
-            "meanEdge": -0.0663
+            "n": 97,
+            "pct": 0.3505,
+            "meanEdge": -0.0697
           },
           "firstDate": "2026-11-11",
           "verdict": "Insufficient data",
-          "reason": "96 of 300 races"
+          "reason": "97 of 300 races"
         }
       }
     },
@@ -885,7 +885,7 @@
       "byCode": {
         "thoroughbred": {
           "bets": 384,
-          "open": 2,
+          "open": 4,
           "races": 384,
           "wins": 24,
           "staked": 384,
@@ -957,77 +957,77 @@
           "reason": "Out-of-sample interval includes zero"
         },
         "greyhound": {
-          "bets": 100,
+          "bets": 101,
           "open": 1,
-          "races": 100,
+          "races": 101,
           "wins": 4,
-          "staked": 100,
+          "staked": 101,
           "returned": 18.9,
-          "profit": -81.1,
+          "profit": -82.1,
           "roi": {
-            "roi": -0.811,
+            "roi": -0.8129,
             "ci": [
-              -0.969,
-              -0.587
+              -0.9693,
+              -0.5998
             ],
-            "races": 100,
-            "staked": 100
+            "races": 101,
+            "staked": 101
           },
           "outOfSample": {
-            "roi": -0.7812,
+            "roi": -0.7879,
             "ci": [
               -1,
-              -0.3437
+              -0.3636
             ],
-            "races": 32,
-            "staked": 32
+            "races": 33,
+            "staked": 33
           },
           "baselines": {
             "favourite": {
-              "roi": -0.2434,
+              "roi": -0.2297,
               "ci": [
-                -0.4267,
-                -0.0542
+                -0.4066,
+                -0.0307
               ],
-              "races": 100,
-              "staked": 100
+              "races": 101,
+              "staked": 101
             },
             "random": {
-              "roi": -0.3844,
+              "roi": -0.3875,
               "ci": [
-                -0.5196,
-                -0.2033
+                -0.5382,
+                -0.2092
               ],
-              "races": 100,
-              "staked": 100
+              "races": 101,
+              "staked": 101
             },
             "favouriteOos": {
-              "roi": -0.2203,
+              "roi": -0.1788,
               "ci": [
-                -0.5469,
-                0.1282
+                -0.4697,
+                0.1304
               ],
-              "races": 32,
-              "staked": 32
+              "races": 33,
+              "staked": 33
             },
             "randomOos": {
-              "roi": -0.1998,
+              "roi": -0.2147,
               "ci": [
-                -0.5607,
-                0.3337
+                -0.5657,
+                0.2919
               ],
-              "races": 32,
-              "staked": 32
+              "races": 33,
+              "staked": 33
             }
           },
           "beatClose": {
-            "n": 100,
-            "pct": 0.59,
-            "meanEdge": 0.2916
+            "n": 101,
+            "pct": 0.5941,
+            "meanEdge": 0.2911
           },
           "firstDate": "2026-11-11",
           "verdict": "Insufficient data",
-          "reason": "100 of 300 races"
+          "reason": "101 of 300 races"
         }
       }
     },
@@ -1038,150 +1038,150 @@
       "description": "$1 on every runner priced under $3.00 at pick time. Tests the favourite-longshot bias directly.",
       "byCode": {
         "thoroughbred": {
-          "bets": 324,
+          "bets": 325,
           "open": 2,
-          "races": 288,
+          "races": 289,
           "wins": 140,
-          "staked": 324,
+          "staked": 325,
           "returned": 295.68,
-          "profit": -28.32,
+          "profit": -29.32,
           "roi": {
-            "roi": -0.0874,
+            "roi": -0.0902,
             "ci": [
-              -0.2024,
-              0.0271
+              -0.2004,
+              0.0205
             ],
-            "races": 288,
-            "staked": 324
+            "races": 289,
+            "staked": 325
           },
           "outOfSample": {
-            "roi": 0.0333,
+            "roi": 0.0203,
             "ci": [
-              -0.1815,
-              0.2604
+              -0.2173,
+              0.2625
             ],
-            "races": 69,
-            "staked": 78
+            "races": 70,
+            "staked": 79
           },
           "baselines": {
             "favourite": {
-              "roi": -0.0923,
+              "roi": -0.0954,
               "ci": [
-                -0.2217,
-                0.0373
+                -0.2125,
+                0.0276
               ],
-              "races": 288,
-              "staked": 288
+              "races": 289,
+              "staked": 289
             },
             "random": {
-              "roi": -0.427,
+              "roi": -0.4277,
               "ci": [
-                -0.4867,
-                -0.367
+                -0.4831,
+                -0.3655
               ],
-              "races": 288,
-              "staked": 288
+              "races": 289,
+              "staked": 289
             },
             "favouriteOos": {
-              "roi": 0.0536,
+              "roi": 0.0386,
               "ci": [
-                -0.1855,
-                0.3196
+                -0.2322,
+                0.3024
               ],
-              "races": 69,
-              "staked": 69
+              "races": 70,
+              "staked": 70
             },
             "randomOos": {
-              "roi": -0.4048,
+              "roi": -0.4081,
               "ci": [
-                -0.516,
-                -0.2658
+                -0.5214,
+                -0.2747
               ],
-              "races": 69,
-              "staked": 69
+              "races": 70,
+              "staked": 70
             }
           },
           "beatClose": {
-            "n": 324,
-            "pct": 0.4568,
-            "meanEdge": 0.0045
+            "n": 325,
+            "pct": 0.4554,
+            "meanEdge": 0.0044
           },
           "firstDate": "2026-11-11",
           "verdict": "Insufficient data",
-          "reason": "288 of 300 races"
+          "reason": "289 of 300 races"
         },
         "greyhound": {
-          "bets": 157,
-          "open": 2,
-          "races": 111,
-          "wins": 62,
-          "staked": 157,
-          "returned": 126.3,
-          "profit": -30.7,
+          "bets": 159,
+          "open": 1,
+          "races": 112,
+          "wins": 63,
+          "staked": 159,
+          "returned": 128.45,
+          "profit": -30.55,
           "roi": {
-            "roi": -0.1955,
+            "roi": -0.1921,
             "ci": [
-              -0.332,
-              -0.0639
+              -0.3138,
+              -0.063
             ],
-            "races": 111,
-            "staked": 157
+            "races": 112,
+            "staked": 159
           },
           "outOfSample": {
-            "roi": -0.2968,
+            "roi": -0.2833,
             "ci": [
-              -0.5134,
-              -0.0931
+              -0.4883,
+              -0.0824
             ],
-            "races": 37,
-            "staked": 53
+            "races": 38,
+            "staked": 55
           },
           "baselines": {
             "favourite": {
-              "roi": -0.2079,
+              "roi": -0.1958,
               "ci": [
-                -0.3881,
-                -0.037
+                -0.3734,
+                -0.0231
               ],
-              "races": 111,
-              "staked": 111
+              "races": 112,
+              "staked": 112
             },
             "random": {
-              "roi": -0.3613,
+              "roi": -0.3643,
               "ci": [
-                -0.4919,
-                -0.1554
+                -0.4954,
+                -0.1891
               ],
-              "races": 111,
-              "staked": 111
+              "races": 112,
+              "staked": 112
             },
             "favouriteOos": {
-              "roi": -0.1954,
+              "roi": -0.16,
               "ci": [
-                -0.4793,
-                0.0973
+                -0.4536,
+                0.1393
               ],
-              "races": 37,
-              "staked": 37
+              "races": 38,
+              "staked": 38
             },
             "randomOos": {
-              "roi": -0.1906,
+              "roi": -0.2039,
               "ci": [
-                -0.5064,
-                0.3089
+                -0.5221,
+                0.2402
               ],
-              "races": 37,
-              "staked": 37
+              "races": 38,
+              "staked": 38
             }
           },
           "beatClose": {
-            "n": 157,
-            "pct": 0.3949,
-            "meanEdge": -0.043
+            "n": 159,
+            "pct": 0.4025,
+            "meanEdge": -0.0414
           },
           "firstDate": "2026-11-11",
           "verdict": "Insufficient data",
-          "reason": "111 of 300 races"
+          "reason": "112 of 300 races"
         }
       }
     },
@@ -1273,77 +1273,77 @@
       "description": "$1 on every thoroughbred the Ladbrokes speed map has leading.",
       "byCode": {
         "thoroughbred": {
-          "bets": 384,
+          "bets": 385,
           "open": 2,
-          "races": 248,
-          "wins": 40,
-          "staked": 384,
-          "returned": 153.14,
-          "profit": -230.86,
+          "races": 249,
+          "wins": 41,
+          "staked": 385,
+          "returned": 156.44,
+          "profit": -228.56,
           "roi": {
-            "roi": -0.6012,
+            "roi": -0.5937,
             "ci": [
-              -0.7321,
-              -0.4608
+              -0.7313,
+              -0.4444
             ],
-            "races": 248,
-            "staked": 384
+            "races": 249,
+            "staked": 385
           },
           "outOfSample": {
-            "roi": -0.7475,
+            "roi": -0.7104,
             "ci": [
-              -0.9145,
-              -0.5291
+              -0.8965,
+              -0.4824
             ],
-            "races": 58,
-            "staked": 81
+            "races": 59,
+            "staked": 82
           },
           "baselines": {
             "favourite": {
-              "roi": -0.0531,
+              "roi": -0.0569,
               "ci": [
-                -0.2052,
-                0.1009
+                -0.2055,
+                0.1004
               ],
-              "races": 248,
-              "staked": 248
+              "races": 249,
+              "staked": 249
             },
             "random": {
-              "roi": -0.3398,
+              "roi": -0.3409,
               "ci": [
-                -0.4228,
-                -0.2543
+                -0.4132,
+                -0.2571
               ],
-              "races": 248,
-              "staked": 248
+              "races": 249,
+              "staked": 249
             },
             "favouriteOos": {
-              "roi": 0.1216,
+              "roi": 0.1025,
               "ci": [
-                -0.1707,
-                0.4233
+                -0.1637,
+                0.4061
               ],
-              "races": 58,
-              "staked": 58
+              "races": 59,
+              "staked": 59
             },
             "randomOos": {
-              "roi": -0.3204,
+              "roi": -0.3257,
               "ci": [
-                -0.4962,
-                -0.1139
+                -0.4988,
+                -0.1059
               ],
-              "races": 58,
-              "staked": 58
+              "races": 59,
+              "staked": 59
             }
           },
           "beatClose": {
-            "n": 384,
-            "pct": 0.2969,
-            "meanEdge": -0.0627
+            "n": 385,
+            "pct": 0.2987,
+            "meanEdge": -0.0622
           },
           "firstDate": "2026-11-11",
           "verdict": "Insufficient data",
-          "reason": "248 of 300 races"
+          "reason": "249 of 300 races"
         }
       }
     }
