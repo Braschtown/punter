@@ -2,64 +2,66 @@
   "jobs": {
     "snapshot": {
       "lastRun": {
-        "utc": "2026-11-20T02:10:01Z",
-        "bne": "2026-11-20T12:10:01+10:00"
+        "utc": "2026-11-20T02:15:00Z",
+        "bne": "2026-11-20T12:15:00+10:00"
       },
       "finished": {
-        "utc": "2026-11-20T02:10:07Z",
-        "bne": "2026-11-20T12:10:07+10:00"
+        "utc": "2026-11-20T02:15:04Z",
+        "bne": "2026-11-20T12:15:04+10:00"
       },
       "ok": true,
       "errors": 0,
       "gaps": 0,
       "counts": {
-        "lateCaptures": 3,
+        "lateCaptures": 2,
         "racesPicked": 1,
-        "picks": 27,
-        "earlyChecks": 1,
+        "picks": 15,
         "races": 202
       }
     },
     "results": {
       "lastRun": {
-        "utc": "2026-11-20T02:00:05Z",
-        "bne": "2026-11-20T12:00:05+10:00"
+        "utc": "2026-11-20T02:15:04Z",
+        "bne": "2026-11-20T12:15:04+10:00"
       },
       "finished": {
-        "utc": "2026-11-20T02:00:05Z",
-        "bne": "2026-11-20T12:00:05+10:00"
-      },
-      "ok": true,
-      "errors": 0,
-      "gaps": 0,
-      "counts": {}
-    },
-    "analysis": {
-      "lastRun": {
-        "utc": "2026-11-20T02:00:05Z",
-        "bne": "2026-11-20T12:00:05+10:00"
-      },
-      "finished": {
-        "utc": "2026-11-20T02:00:05Z",
-        "bne": "2026-11-20T12:00:05+10:00"
+        "utc": "2026-11-20T02:15:06Z",
+        "bne": "2026-11-20T12:15:06+10:00"
       },
       "ok": true,
       "errors": 0,
       "gaps": 0,
       "counts": {
-        "unchanged": 1,
-        "thoroughbredRaces": 494,
+        "settled": 1,
+        "pending": 1
+      }
+    },
+    "analysis": {
+      "lastRun": {
+        "utc": "2026-11-20T02:15:06Z",
+        "bne": "2026-11-20T12:15:06+10:00"
+      },
+      "finished": {
+        "utc": "2026-11-20T02:15:06Z",
+        "bne": "2026-11-20T12:15:06+10:00"
+      },
+      "ok": true,
+      "errors": 0,
+      "gaps": 0,
+      "counts": {
+        "updated": 1,
+        "thoroughbredRaces": 495,
         "greyhoundRaces": 149
       }
     },
     "forward": {
       "lastRun": {
-        "utc": "2026-11-20T02:00:05Z",
-        "bne": "2026-11-20T12:00:05+10:00"
+        "utc": "2026-11-20T02:15:06Z",
+        "bne": "2026-11-20T12:15:06+10:00"
       },
       "finished": {
-        "utc": "2026-11-20T02:00:05Z",
-        "bne": "2026-11-20T12:00:05+10:00"
+        "utc": "2026-11-20T02:15:07Z",
+        "bne": "2026-11-20T12:15:07+10:00"
       },
       "ok": true,
       "errors": 0,
@@ -67,7 +69,7 @@
       "counts": {
         "updated": 1,
         "days": 10,
-        "settledBets": 12348
+        "settledBets": 12367
       }
     }
   },
@@ -77,12 +79,12 @@
       "state": "OK",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-20T02:10:01Z",
-        "bne": "2026-11-20T12:10:01+10:00"
+        "utc": "2026-11-20T02:15:04Z",
+        "bne": "2026-11-20T12:15:04+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-20T02:10:01Z",
-        "bne": "2026-11-20T12:10:01+10:00"
+        "utc": "2026-11-20T02:15:04Z",
+        "bne": "2026-11-20T12:15:04+10:00"
       }
     },
     "racing-results": {
@@ -91,12 +93,12 @@
       "note": "Results come from the Ladbrokes event feed. Official body pages are linked, not read.",
       "lastError": null,
       "lastRun": {
-        "utc": "2026-11-20T02:00:05Z",
-        "bne": "2026-11-20T12:00:05+10:00"
+        "utc": "2026-11-20T02:15:04Z",
+        "bne": "2026-11-20T12:15:04+10:00"
       },
       "lastOk": {
-        "utc": "2026-11-20T02:00:05Z",
-        "bne": "2026-11-20T12:00:05+10:00"
+        "utc": "2026-11-20T02:15:04Z",
+        "bne": "2026-11-20T12:15:04+10:00"
       }
     },
     "betfair": {
