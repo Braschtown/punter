@@ -1,7 +1,7 @@
 {
   "generated": {
-    "utc": "2026-11-23T04:45:04Z",
-    "bne": "2026-11-23T14:45:04+10:00"
+    "utc": "2026-11-23T05:15:05Z",
+    "bne": "2026-11-23T15:15:05+10:00"
   },
   "minRaces": 300,
   "settings": {
@@ -16,10 +16,10 @@
   },
   "counts": {
     "thoroughbred": {
-      "races": 728,
-      "runners": 6961,
-      "runnersWithEarly": 6668,
-      "runnersWithLate": 6350,
+      "races": 729,
+      "runners": 6972,
+      "runnersWithEarly": 6679,
+      "runnersWithLate": 6361,
       "dates": 16
     },
     "greyhound": {
@@ -50,13 +50,13 @@
     "thoroughbred": {
       "favourite": {
         "all": {
-          "roi": -0.1446,
+          "roi": -0.1458,
           "ci": [
-            -0.2277,
-            -0.0588
+            -0.231,
+            -0.0616
           ],
-          "races": 728,
-          "staked": 728
+          "races": 729,
+          "staked": 729
         },
         "inSample": {
           "roi": -0.1844,
@@ -68,24 +68,24 @@
           "staked": 453
         },
         "outOfSample": {
-          "roi": -0.0791,
+          "roi": -0.0824,
           "ci": [
-            -0.2364,
-            0.0809
+            -0.2262,
+            0.0704
           ],
-          "races": 275,
-          "staked": 275
+          "races": 276,
+          "staked": 276
         }
       },
       "random": {
         "all": {
-          "roi": -0.2996,
+          "roi": -0.2985,
           "ci": [
-            -0.3526,
-            -0.2466
+            -0.353,
+            -0.2454
           ],
-          "races": 728,
-          "staked": 728
+          "races": 729,
+          "staked": 729
         },
         "inSample": {
           "roi": -0.3223,
@@ -97,13 +97,13 @@
           "staked": 453
         },
         "outOfSample": {
-          "roi": -0.2623,
+          "roi": -0.2594,
           "ci": [
-            -0.3474,
-            -0.158
+            -0.3488,
+            -0.1597
           ],
-          "races": 275,
-          "staked": 275
+          "races": 276,
+          "staked": 276
         }
       }
     },
@@ -175,25 +175,25 @@
       "description": "Does the early price beat the closing price on average? Backing everything early is compared with backing everything at the close.",
       "byCode": {
         "thoroughbred": {
-          "n": 694,
-          "runners": 6668,
+          "n": 695,
+          "runners": 6679,
           "meanDrift": 0.0056,
           "driftNote": "Implied probability at the close minus at the early price. Positive means the price shortened after we first saw it.",
           "pctEarlyLonger": 0.4222,
           "pctEarlyShorter": 0.501,
           "earlyVsLate": {
-            "runners": 6342,
+            "runners": 6353,
             "pctEarlyLonger": 0.5017
           },
           "roiEarly": {
             "all": {
-              "roi": -0.2316,
+              "roi": -0.229,
               "ci": [
-                -0.2953,
-                -0.1619
+                -0.2916,
+                -0.1586
               ],
-              "races": 694,
-              "staked": 6668
+              "races": 695,
+              "staked": 6679
             },
             "inSample": {
               "roi": -0.2808,
@@ -205,24 +205,24 @@
               "staked": 3981
             },
             "outOfSample": {
-              "roi": -0.1587,
+              "roi": -0.1525,
               "ci": [
-                -0.2746,
-                -0.0147
+                -0.2748,
+                -0.0125
               ],
-              "races": 275,
-              "staked": 2687
+              "races": 276,
+              "staked": 2698
             }
           },
           "roiClose": {
             "all": {
-              "roi": -0.2931,
+              "roi": -0.2918,
               "ci": [
-                -0.3513,
-                -0.2378
+                -0.345,
+                -0.2336
               ],
-              "races": 694,
-              "staked": 6668
+              "races": 695,
+              "staked": 6679
             },
             "inSample": {
               "roi": -0.3262,
@@ -234,13 +234,13 @@
               "staked": 3981
             },
             "outOfSample": {
-              "roi": -0.2442,
+              "roi": -0.241,
               "ci": [
                 -0.3404,
-                -0.128
+                -0.1271
               ],
-              "races": 275,
-              "staked": 2687
+              "races": 276,
+              "staked": 2698
             }
           },
           "verdict": "No edge",
@@ -326,7 +326,7 @@
       "description": "Do runners in each price band win as often as their price implies? Longshots are usually overbet.",
       "byCode": {
         "thoroughbred": {
-          "n": 728,
+          "n": 729,
           "bands": [
             {
               "band": "$1-2",
@@ -376,117 +376,117 @@
               "band": "$3-5",
               "lo": 3,
               "hi": 5,
-              "runners": 847,
+              "runners": 849,
               "wins": 181,
-              "impliedPct": 0.2644,
-              "actualPct": 0.2137,
+              "impliedPct": 0.2643,
+              "actualPct": 0.2132,
               "actualCi": [
-                0.1874,
-                0.2426
+                0.187,
+                0.242
               ],
               "roi": {
-                "roi": -0.1956,
+                "roi": -0.1975,
                 "ci": [
-                  -0.2843,
-                  -0.1069
+                  -0.2878,
+                  -0.1045
                 ],
-                "races": 537,
-                "staked": 847
+                "races": 538,
+                "staked": 849
               }
             },
             {
               "band": "$5-8",
               "lo": 5,
               "hi": 8,
-              "runners": 1002,
+              "runners": 1003,
               "wins": 143.5,
               "impliedPct": 0.1624,
-              "actualPct": 0.1432,
+              "actualPct": 0.1431,
               "actualCi": [
-                0.1234,
-                0.1668
+                0.1232,
+                0.1666
               ],
               "roi": {
-                "roi": -0.136,
+                "roi": -0.1368,
                 "ci": [
-                  -0.254,
-                  -0.0233
+                  -0.2495,
+                  -0.0143
                 ],
-                "races": 559,
-                "staked": 1002
+                "races": 560,
+                "staked": 1003
               }
             },
             {
               "band": "$8-13",
               "lo": 8,
               "hi": 13,
-              "runners": 1185,
+              "runners": 1189,
               "wins": 95,
               "impliedPct": 0.1032,
-              "actualPct": 0.0802,
+              "actualPct": 0.0799,
               "actualCi": [
-                0.066,
-                0.097
+                0.0658,
+                0.0967
               ],
               "roi": {
-                "roi": -0.2308,
+                "roi": -0.2334,
                 "ci": [
-                  -0.3764,
-                  -0.0881
+                  -0.3729,
+                  -0.0885
                 ],
-                "races": 603,
-                "staked": 1185
+                "races": 604,
+                "staked": 1189
               }
             },
             {
               "band": "$13-21",
               "lo": 13,
               "hi": 21,
-              "runners": 1099,
-              "wins": 43.5,
+              "runners": 1100,
+              "wins": 44.5,
               "impliedPct": 0.0635,
-              "actualPct": 0.0396,
+              "actualPct": 0.0405,
               "actualCi": [
-                0.03,
-                0.0533
+                0.0307,
+                0.0543
               ],
               "roi": {
-                "roi": -0.3649,
+                "roi": -0.35,
                 "ci": [
-                  -0.5351,
-                  -0.1741
+                  -0.521,
+                  -0.1706
                 ],
-                "races": 582,
-                "staked": 1099
+                "races": 583,
+                "staked": 1100
               }
             },
             {
               "band": "$21-51",
               "lo": 21,
               "hi": 51,
-              "runners": 1199,
+              "runners": 1201,
               "wins": 37,
               "impliedPct": 0.0345,
-              "actualPct": 0.0309,
+              "actualPct": 0.0308,
               "actualCi": [
-                0.0225,
+                0.0224,
                 0.0422
               ],
               "roi": {
-                "roi": -0.0926,
+                "roi": -0.0941,
                 "ci": [
-                  -0.3518,
-                  0.192
+                  -0.3707,
+                  0.2002
                 ],
-                "races": 586,
-                "staked": 1199
+                "races": 587,
+                "staked": 1201
               }
             },
             {
               "band": "$51+",
               "lo": 51,
               "hi": null,
-              "runners": 1099,
+              "runners": 1100,
               "wins": 3,
               "impliedPct": 0.0113,
               "actualPct": 0.0027,
@@ -495,13 +495,13 @@
                 0.008
               ],
               "roi": {
-                "roi": -0.8189,
+                "roi": -0.8191,
                 "ci": [
                   -1,
-                  -0.5998
+                  -0.5876
                 ],
-                "races": 520,
-                "staked": 1099
+                "races": 521,
+                "staked": 1100
               }
             }
           ],
@@ -741,18 +741,18 @@
       "description": "How much the bookmaker's win market adds up to over 100%. Higher means a bigger margin against the punter.",
       "byCode": {
         "thoroughbred": {
-          "n": 728,
+          "n": 729,
           "close": {
             "mean": 0.2119,
             "ci": [
-              0.2093,
+              0.2094,
               0.2141
             ],
-            "races": 728
+            "races": 729
           },
           "late": {
-            "mean": 0.2533,
-            "races": 659
+            "mean": 0.2534,
+            "races": 660
           },
           "byTrack": [
             {
@@ -1132,8 +1132,8 @@
             },
             {
               "track": "Barcaldine",
-              "races": 3,
-              "mean": 0.2212
+              "races": 4,
+              "mean": 0.2248
             }
           ],
           "verdict": "No edge",
